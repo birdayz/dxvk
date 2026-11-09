@@ -1362,6 +1362,23 @@ namespace dxvk {
     Rc<DxvkDevice>          m_device;
     DxvkObjects*            m_common;
 
+    bool                    m_kblUavGuard = false;
+    uint64_t                m_kblGraphicsChecks = 0u;
+    uint64_t                m_kblComputeChecks = 0u;
+    uint64_t                m_kblImageReadBindings = 0u;
+    uint64_t                m_kblTexelReadBindings = 0u;
+    std::vector<VkFormat>   m_kblReadFormats;
+    std::vector<VkFormat>   m_kblTexelReadFormats;
+
+    struct KblFormatProperties {
+      VkFormat format;
+      VkFormatFeatureFlags2 optimal;
+      VkFormatFeatureFlags2 linear;
+      VkFormatFeatureFlags2 buffer;
+    };
+    std::vector<KblFormatProperties> m_kblFormatProperties;
+
+
     uint64_t                m_trackingId = 0u;
     uint32_t                m_renderPassIndex = 0u;
     
@@ -1768,6 +1785,9 @@ namespace dxvk {
     template<VkPipelineBindPoint BindPoint>
     void updatePushData();
     
+    const KblFormatProperties& getKblFormatProperties(VkFormat format);
+    void checkKblUavReads(const DxvkPipelineBindings* layout, bool compute);
+
     template<bool Resolve = true>
     bool commitComputeState();
     

@@ -1,4 +1,5 @@
 #include <algorithm>
+#include <atomic>
 #include <cstring>
 
 #include "../dxgi/dxgi_monitor.h"
@@ -7,6 +8,7 @@
 
 #include "../dxvk/dxvk_adapter.h"
 #include "../dxvk/dxvk_instance.h"
+#include "../dxvk/dxvk_kbl_guard.h"
 
 #include "d3d11_buffer.h"
 #include "d3d11_class_linkage.h"
@@ -27,6 +29,7 @@
 
 #include "../wsi/wsi_window.h"
 
+#include "../util/util_env.h"
 #include "../util/util_shared_res.h"
 
 namespace dxvk {
@@ -1675,10 +1678,28 @@ namespace dxvk {
         return GetFormatSupportFlags(info->InFormat, nullptr, &info->OutFormatSupport2);
       } return S_OK;
 
-      default:
+      default: {
         // For everything else, we can use the device feature struct
         // that we already initialized during device creation.
-        return m_deviceFeatures.GetFeatureData(Feature, FeatureSupportDataSize, pFeatureSupportData);
+        HRESULT result = m_deviceFeatures.GetFeatureData(Feature, FeatureSupportDataSize, pFeatureSupportData);
+        if (SUCCEEDED(result) && Feature == D3D11_FEATURE_D3D11_OPTIONS2
+         && env::getEnvVar("DXVK_KBL_WOW_COMPAT") == "1") {
+          const auto& adapter = m_dxvkDevice->properties().core.properties;
+          UINT rgba16 = 0u, rg16 = 0u;
+          if (kbl::isWowHd620(env::getExeName(), adapter.vendorID, adapter.deviceID)
+           && SUCCEEDED(GetFormatSupportFlags(DXGI_FORMAT_R16G16B16A16_FLOAT, nullptr, &rgba16))
+           && SUCCEEDED(GetFormatSupportFlags(DXGI_FORMAT_R16G16_FLOAT, nullptr, &rg16))
+           && (rgba16 & D3D11_FORMAT_SUPPORT2_UAV_TYPED_LOAD)
+           && (rg16 & D3D11_FORMAT_SUPPORT2_UAV_TYPED_LOAD)) {
+            auto* options = static_cast<D3D11_FEATURE_DATA_D3D11_OPTIONS2*>(pFeatureSupportData);
+            options->TypedUAVLoadAdditionalFormats = TRUE;
+            static std::atomic<bool> warned = { false };
+            if (!warned.exchange(true))
+              Logger::warn("KBLWOW 2.7.1 EXPERIMENTAL/UNSUPPORTED: returned aggregate typed-UAV-load flag overridden; normalized UAV reads are NOT implemented; per-format capabilities remain truthful; fail-closed UAV guard enabled.");
+          }
+        }
+        return result;
+      }
     }
   }
   

@@ -5,6 +5,8 @@
 #include "dxvk_descriptor_pool.h"
 #include "dxvk_limits.h"
 #include "dxvk_pipelayout.h"
+#include "dxvk_kbl_guard.h"
+#include "../util/util_env.h"
 
 namespace dxvk {
   
@@ -280,8 +282,13 @@ namespace dxvk {
     const DxvkPipelineLayoutBuilder&  builder) {
     auto stageMask = builder.getStageMask();
 
+    const auto& adapter = device->properties().core.properties;
+    bool kblGuard = kbl::isWowHd620(env::getExeName(), adapter.vendorID, adapter.deviceID)
+      && (env::getEnvVar("DXVK_KBL_WOW_UAV_GUARD") == "1"
+       || env::getEnvVar("DXVK_KBL_WOW_COMPAT") == "1");
+
     // Fill metadata structures that are independent of set layouts
-    buildMetadata(builder);
+    buildMetadata(builder, kblGuard);
 
     // Build pipeline layout for graphics pipeline libraries if applicable
     if ((stageMask & VK_SHADER_STAGE_ALL_GRAPHICS) && device->canUseGraphicsPipelineLibrary())
@@ -491,7 +498,8 @@ namespace dxvk {
 
 
   void DxvkPipelineBindings::buildMetadata(
-    const DxvkPipelineLayoutBuilder&  builder) {
+    const DxvkPipelineLayoutBuilder&  builder,
+          bool                        kblGuard) {
     auto bindings = builder.getBindings();
 
     for (size_t i = 0; i < bindings.bindingCount; i++) {
@@ -509,6 +517,11 @@ namespace dxvk {
         throw DxvkError("Combined image/sampler descriptors not supported");
 
       if (binding.getDescriptorCount()) {
+        if (kblGuard && kbl::isTypedStorageRead(binding.getDescriptorType(), binding.getAccess())) {
+          for (uint32_t j = 0; j < binding.getDescriptorCount(); j++)
+            m_kblTypedReadResources.push_back(binding.getArrayElement(j));
+        }
+
         if (binding.getDescriptorType() != VK_DESCRIPTOR_TYPE_SAMPLER) {
           if (binding.getAccess() & vk::AccessWriteMask) {
             appendDescriptors(m_readWriteResources, binding, srcMapping);
