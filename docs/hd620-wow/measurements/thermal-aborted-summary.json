@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "experiment": "Bounded 80C TCC attempt on Kaby Lake HD620",
+  "date": "2026-11-09",
+  "result": {
+    "decision": "aborted_on_register_drift_original_75C_restored_no_retry",
+    "valid_80C_performance_comparison": false,
+    "stable_40_fps_achieved": false,
+    "drift_value_and_actor": "not recorded; firmware/EC attribution unproven"
+  },
+  "scope": {
+    "scene": "Fresh stationary outdoor view; maximized client 1920x1012; not comparable to earlier inn/windowed captures",
+    "render_scale": 0.666667,
+    "dxvk": "guarded 2.7",
+    "mesa": "isolated stock 26.2.6",
+    "cpu_turbo": "enabled",
+    "gpu_min_max_boost_mhz": [
+      300,
+      1050,
+      1050
+    ],
+    "tracing": false,
+    "forced_simd": false,
+    "scene_limit": "Online players vary; camera/window verified in screenshots"
+  },
+  "method": {
+    "engine": "Approximately one-second aggregates, not per-frame percentiles or a stable FPS floor",
+    "native": "Means weighted by native period duration",
+    "thermal": "1Hz read-only samples; status counts are observations, not exact fractions of elapsed time",
+    "alignment": "Engine and telemetry windows overlap but are not exactly aligned",
+    "cpu_gpu_timing": "Overlapping metrics; do not add"
+  },
+  "lease": {
+    "helper_sha256": "e84bd50580d8b3f3025ac4b66534c8b8787d72cc948642430588035643a61fb7",
+    "local_fixture_assertions_passed": 45,
+    "original_register": "0x0000000019640000",
+    "verified_ready_register": "0x0000000014640000",
+    "ready_utc": "2026-11-09T21:02:58.941504Z",
+    "abort_utc": "2026-11-09T21:03:03.523143Z",
+    "ready_to_abort_seconds": 4.581639,
+    "abort_reason": "monitored TCC register drift",
+    "configured_helper_limit_seconds": 180,
+    "configured_manager_limit_seconds": 190,
+    "configured_temperature_abort_c": 85,
+    "deadline_expiry_or_sigkill_on_target_tested": false,
+    "restore_logged_utc": "2026-11-09T21:03:03.523867Z",
+    "restored_register": "0x0000000019640000",
+    "independent_readback_verified": true,
+    "independent_stop_post_exit_code": 0,
+    "stop_post_result": "no_snapshot_no_write",
+    "snapshot_and_ready_absent": true,
+    "main_pid_after_abort": 0,
+    "unit_state_after_abort": "failed, not active",
+    "nominal_b_capture": "Entire capture after restoration; all 70 samples at 75C. Never interpret its FPS as an 80C result.",
+    "final_cleanup": "Temporary lease unloaded; staged write helper and state removed; temporary input and screen-hold services stopped; game remains running"
+  },
+  "runs": [
+    {
+      "id": "tcc75-a",
+      "validity": "valid_75C_baseline",
+      "engine_csv": "tcc75-a.csv",
+      "engine_csv_sha256": "91b59de4f99443606323b0366cd168abc34ed472b0cc9a7f32571c50bbed65f8",
+      "engine": {
+        "rows": 72,
+        "elapsed_seconds": 72.883,
+        "mean_fps": 18.904167,
+        "mean_frame_ms": 52.909583,
+        "mean_cpu_frame_ms": 14.150278,
+        "mean_gpu_render_ms": 50.310833,
+        "all_rows_gpu_bound": true
+      },
+      "telemetry": {
+        "sysfs_samples": 70,
+        "native_samples": 68,
+        "missed_deadlines": 0,
+        "clean_eof": true,
+        "native_period_seconds": 69.798361,
+        "weighted_actual_gpu_mhz": 983.662068,
+        "weighted_requested_gpu_mhz": 1049.924369,
+        "weighted_render_busy_pct": 99.997935,
+        "weighted_gpu_w": 10.775776,
+        "weighted_package_w": 16.866777
+      },
+      "thermal": {
+        "samples": 70,
+        "effective_tcc_c": 75,
+        "all_ac_online": true,
+        "package_temp_c": {
+          "min": 74,
+          "max": 77,
+          "mean": 75.1
+        },
+        "gfx_current_active_sample_counts": {
+          "prochot": 0,
+          "thermal": 66,
+          "ratl": 0,
+          "vr_thermal": 0,
+          "vr_tdc": 0,
+          "electrical_or_other": 0,
+          "pl1": 0,
+          "pl2_or_pl3": 0,
+          "inefficient_operation": 0
+        },
+        "core0_throttle_counter_delta": 1593,
+        "package_throttle_counter_delta": 7855
+      }
+    },
+    {
+      "id": "tcc80-b",
+      "validity": "INVALID_80C_comparison_entire_capture_at_restored_75C",
+      "engine_csv": "tcc80-aborted-postrestore.csv",
+      "engine_csv_sha256": "cf25ccc1481aa67ad576713d299e2e298f1eeaf9f4150e8fc751725395d09b70",
+      "engine": {
+        "rows": 73,
+        "elapsed_seconds": 73.077,
+        "mean_fps": 18.863014,
+        "mean_frame_ms": 53.000959,
+        "mean_cpu_frame_ms": 13.492192,
+        "mean_gpu_render_ms": 50.371507,
+        "all_rows_gpu_bound": true
+      },
+      "telemetry": {
+        "sysfs_samples": 70,
+        "native_samples": 68,
+        "missed_deadlines": 0,
+        "clean_eof": true,
+        "native_period_seconds": 69.79725,
+        "weighted_actual_gpu_mhz": 981.184795,
+        "weighted_requested_gpu_mhz": 1049.855123,
+        "weighted_render_busy_pct": 99.999998,
+        "weighted_gpu_w": 10.653729,
+        "weighted_package_w": 16.820938
+      },
+      "thermal": {
+        "samples": 70,
+        "effective_tcc_c": 75,
+        "all_ac_online": true,
+        "package_temp_c": {
+          "min": 74,
+          "max": 76,
+          "mean": 75.142857
+        },
+        "gfx_current_active_sample_counts": {
+          "prochot": 0,
+          "thermal": 65,
+          "ratl": 0,
+          "vr_thermal": 0,
+          "vr_tdc": 0,
+          "electrical_or_other": 0,
+          "pl1": 0,
+          "pl2_or_pl3": 0,
+          "inefficient_operation": 0
+        },
+        "core0_throttle_counter_delta": 1558,
+        "package_throttle_counter_delta": 7112
+      }
+    },
+    {
+      "id": "tcc75-return",
+      "validity": "valid_75C_return",
+      "engine_csv": "tcc75-return.csv",
+      "engine_csv_sha256": "1f3773762b4c3947f4b4b0df4e931b4e1d87148a285762397aa896d911b7a62e",
+      "engine": {
+        "rows": 73,
+        "elapsed_seconds": 73.02,
+        "mean_fps": 18.805479,
+        "mean_frame_ms": 53.189452,
+        "mean_cpu_frame_ms": 12.966849,
+        "mean_gpu_render_ms": 50.56863,
+        "all_rows_gpu_bound": true
+      },
+      "telemetry": {
+        "sysfs_samples": 70,
+        "native_samples": 68,
+        "missed_deadlines": 0,
+        "clean_eof": true,
+        "native_period_seconds": 69.515193,
+        "weighted_actual_gpu_mhz": 980.188608,
+        "weighted_requested_gpu_mhz": 1049.18072,
+        "weighted_render_busy_pct": 99.948243,
+        "weighted_gpu_w": 10.620393,
+        "weighted_package_w": 16.839062
+      },
+      "thermal": {
+        "samples": 70,
+        "effective_tcc_c": 75,
+        "all_ac_online": true,
+        "package_temp_c": {
+          "min": 74,
+          "max": 77,
+          "mean": 75.1
+        },
+        "gfx_current_active_sample_counts": {
+          "prochot": 0,
+          "thermal": 64,
+          "ratl": 0,
+          "vr_thermal": 0,
+          "vr_tdc": 0,
+          "electrical_or_other": 0,
+          "pl1": 0,
+          "pl2_or_pl3": 0,
+          "inefficient_operation": 0
+        },
+        "core0_throttle_counter_delta": 2029,
+        "package_throttle_counter_delta": 7999
+      }
+    }
+  ]
+}
