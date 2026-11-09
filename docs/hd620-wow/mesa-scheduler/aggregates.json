@@ -1,0 +1,1154 @@
+{
+  "schemaVersion": 1,
+  "status": "rejected_no_observed_gain",
+  "default": "off",
+  "measurement": "intrusive_gpu_trace_not_ordinary_fps",
+  "workloadDescription": "stationary same-view live-scene",
+  "onlinePlayerActivityVaries": true,
+  "workloadImmutable": false,
+  "deterministicReplay": false,
+  "hardwareClass": "Intel Kaby Lake GT2 / HD Graphics 620",
+  "runtime": "Mesa 26.2.6 prototype; guarded experimental DXVK 2.7.1+",
+  "privacy": "Only hashes and aggregated statistics; no shader inputs, bodies, raw traces, frame timestamps, account data or device identity paths.",
+  "runs": [
+    {
+      "run": "A1",
+      "experimentEnabled": false,
+      "intelDebug": "cs",
+      "completeFrameCount": 415,
+      "fullFrameMs": {
+        "mean": 44.977907,
+        "min": 42.958,
+        "max": 49.74625,
+        "total": 18665.831569,
+        "median": 45.044167,
+        "p90": 45.796516,
+        "p95": 45.983375,
+        "sampleStddev": 0.74419
+      },
+      "shaderAggregates": [
+        {
+          "driverShaderHash": "0x79a7036abfc4b22",
+          "sourceShaderSha1": "e2e66a6bb3d4cc162df043f02106d2699a600389",
+          "count": 415,
+          "framesPresent": 415,
+          "meanCountPerFrame": 1,
+          "totalMs": 3262.020421,
+          "meanMsPerFrame": 7.86029,
+          "meanMsPerDispatch": 7.86029,
+          "minDispatchMs": 7.5575,
+          "maxDispatchMs": 8.194,
+          "eventKindCounts": {
+            "compute": 415
+          }
+        },
+        {
+          "driverShaderHash": "0x580ca7030f598e7",
+          "sourceShaderSha1": "dbcbde0edb20ad6d58c0dc0e1c5a3b72110cd0b1",
+          "count": 415,
+          "framesPresent": 415,
+          "meanCountPerFrame": 1,
+          "totalMs": 2373.677911,
+          "meanMsPerFrame": 5.719706,
+          "meanMsPerDispatch": 5.719706,
+          "minDispatchMs": 4.525333,
+          "maxDispatchMs": 6.70525,
+          "eventKindCounts": {
+            "compute_indirect": 415
+          }
+        },
+        {
+          "driverShaderHash": "0x859e6b0efc6439f6",
+          "sourceShaderSha1": "940a0c96886f320234330b4d18cb6fa4d43f51ca",
+          "count": 415,
+          "framesPresent": 415,
+          "meanCountPerFrame": 1,
+          "totalMs": 2049.554092,
+          "meanMsPerFrame": 4.938685,
+          "meanMsPerDispatch": 4.938685,
+          "minDispatchMs": 4.3645,
+          "maxDispatchMs": 5.56325,
+          "eventKindCounts": {
+            "compute": 415
+          }
+        },
+        {
+          "driverShaderHash": "0x67fee361ac258949",
+          "count": 830,
+          "framesPresent": 415,
+          "meanCountPerFrame": 2,
+          "totalMs": 1101.88218,
+          "meanMsPerFrame": 2.655138,
+          "meanMsPerDispatch": 1.327569,
+          "minDispatchMs": 1.117166,
+          "maxDispatchMs": 1.566167,
+          "eventKindCounts": {
+            "compute": 830
+          }
+        },
+        {
+          "driverShaderHash": "0x7d0a8d69f0923615",
+          "count": 415,
+          "framesPresent": 415,
+          "meanCountPerFrame": 1,
+          "totalMs": 680.329743,
+          "meanMsPerFrame": 1.639349,
+          "meanMsPerDispatch": 1.639349,
+          "minDispatchMs": 1.548667,
+          "maxDispatchMs": 1.851417,
+          "eventKindCounts": {
+            "compute": 415
+          }
+        },
+        {
+          "driverShaderHash": "0x21ee37b6995f4597",
+          "count": 415,
+          "framesPresent": 415,
+          "meanCountPerFrame": 1,
+          "totalMs": 482.352583,
+          "meanMsPerFrame": 1.162295,
+          "meanMsPerDispatch": 1.162295,
+          "minDispatchMs": 1.090167,
+          "maxDispatchMs": 1.276167,
+          "eventKindCounts": {
+            "compute": 415
+          }
+        },
+        {
+          "driverShaderHash": "0x20c6f01908e83ed5",
+          "count": 830,
+          "framesPresent": 415,
+          "meanCountPerFrame": 2,
+          "totalMs": 232.668916,
+          "meanMsPerFrame": 0.560648,
+          "meanMsPerDispatch": 0.280324,
+          "minDispatchMs": 0.01,
+          "maxDispatchMs": 0.620166,
+          "eventKindCounts": {
+            "compute": 830
+          }
+        },
+        {
+          "driverShaderHash": "0x89a9973430c58a25",
+          "count": 415,
+          "framesPresent": 415,
+          "meanCountPerFrame": 1,
+          "totalMs": 219.600843,
+          "meanMsPerFrame": 0.529159,
+          "meanMsPerDispatch": 0.529159,
+          "minDispatchMs": 0.4215,
+          "maxDispatchMs": 0.7025,
+          "eventKindCounts": {
+            "compute": 415
+          }
+        },
+        {
+          "driverShaderHash": "0xe9049ae1af45c8d0",
+          "count": 415,
+          "framesPresent": 415,
+          "meanCountPerFrame": 1,
+          "totalMs": 205.679324,
+          "meanMsPerFrame": 0.495613,
+          "meanMsPerDispatch": 0.495613,
+          "minDispatchMs": 0.388833,
+          "maxDispatchMs": 0.685417,
+          "eventKindCounts": {
+            "compute": 415
+          }
+        },
+        {
+          "driverShaderHash": "0xf5a7fce76a4bf918",
+          "count": 415,
+          "framesPresent": 415,
+          "meanCountPerFrame": 1,
+          "totalMs": 135.738576,
+          "meanMsPerFrame": 0.327081,
+          "meanMsPerDispatch": 0.327081,
+          "minDispatchMs": 0.2765,
+          "maxDispatchMs": 0.435,
+          "eventKindCounts": {
+            "compute": 415
+          }
+        },
+        {
+          "driverShaderHash": "0xe30091718f7e0a57",
+          "count": 261,
+          "framesPresent": 261,
+          "meanCountPerFrame": 0.628916,
+          "totalMs": 123.835746,
+          "meanMsPerFrame": 0.298399,
+          "meanMsPerDispatch": 0.474466,
+          "minDispatchMs": 0.446416,
+          "maxDispatchMs": 0.616667,
+          "eventKindCounts": {
+            "compute": 261
+          }
+        },
+        {
+          "driverShaderHash": "0x3f9eb268f1cf745d",
+          "count": 830,
+          "framesPresent": 415,
+          "meanCountPerFrame": 2,
+          "totalMs": 95.973258,
+          "meanMsPerFrame": 0.231261,
+          "meanMsPerDispatch": 0.11563,
+          "minDispatchMs": 0.0085,
+          "maxDispatchMs": 0.266,
+          "eventKindCounts": {
+            "compute": 830
+          }
+        },
+        {
+          "driverShaderHash": "0xbbea6fdb69c64db8",
+          "count": 415,
+          "framesPresent": 415,
+          "meanCountPerFrame": 1,
+          "totalMs": 46.887087,
+          "meanMsPerFrame": 0.112981,
+          "meanMsPerDispatch": 0.112981,
+          "minDispatchMs": 0.102917,
+          "maxDispatchMs": 0.145584,
+          "eventKindCounts": {
+            "compute": 415
+          }
+        },
+        {
+          "driverShaderHash": "0x58e9835e31fbec6e",
+          "count": 2490,
+          "framesPresent": 415,
+          "meanCountPerFrame": 6,
+          "totalMs": 46.590686,
+          "meanMsPerFrame": 0.112267,
+          "meanMsPerDispatch": 0.018711,
+          "minDispatchMs": 0.006333,
+          "maxDispatchMs": 0.103583,
+          "eventKindCounts": {
+            "compute": 2490
+          }
+        },
+        {
+          "driverShaderHash": "0x589ee41905ff5ed2",
+          "count": 415,
+          "framesPresent": 415,
+          "meanCountPerFrame": 1,
+          "totalMs": 38.907921,
+          "meanMsPerFrame": 0.093754,
+          "meanMsPerDispatch": 0.093754,
+          "minDispatchMs": 0.085167,
+          "maxDispatchMs": 0.119,
+          "eventKindCounts": {
+            "compute": 415
+          }
+        },
+        {
+          "driverShaderHash": "0x7fb288e8342a1654",
+          "count": 415,
+          "framesPresent": 415,
+          "meanCountPerFrame": 1,
+          "totalMs": 31.842487,
+          "meanMsPerFrame": 0.076729,
+          "meanMsPerDispatch": 0.076729,
+          "minDispatchMs": 0.07,
+          "maxDispatchMs": 0.108583,
+          "eventKindCounts": {
+            "compute": 415
+          }
+        },
+        {
+          "driverShaderHash": "0xccbdee0a8db99d2",
+          "count": 415,
+          "framesPresent": 415,
+          "meanCountPerFrame": 1,
+          "totalMs": 29.781499,
+          "meanMsPerFrame": 0.071763,
+          "meanMsPerDispatch": 0.071763,
+          "minDispatchMs": 0.065583,
+          "maxDispatchMs": 0.090667,
+          "eventKindCounts": {
+            "compute": 415
+          }
+        },
+        {
+          "driverShaderHash": "0x88755165cbb69e62",
+          "count": 415,
+          "framesPresent": 415,
+          "meanCountPerFrame": 1,
+          "totalMs": 18.836246,
+          "meanMsPerFrame": 0.045389,
+          "meanMsPerDispatch": 0.045389,
+          "minDispatchMs": 0.04025,
+          "maxDispatchMs": 0.063417,
+          "eventKindCounts": {
+            "compute": 415
+          }
+        }
+      ],
+      "eventKindAggregates": [
+        {
+          "kind": "compute",
+          "count": 10221,
+          "totalMs": 8802.481608,
+          "meanMsPerFrame": 21.210799
+        },
+        {
+          "kind": "render_pass",
+          "count": 23887,
+          "totalMs": 6385.10927,
+          "meanMsPerFrame": 15.385805
+        },
+        {
+          "kind": "blorp",
+          "count": 61445,
+          "totalMs": 2970.003825,
+          "meanMsPerFrame": 7.156636
+        },
+        {
+          "kind": "compute_indirect",
+          "count": 415,
+          "totalMs": 2373.677911,
+          "meanMsPerFrame": 5.719706
+        }
+      ],
+      "nativeTop3": [
+        {
+          "driverShaderHash": "0x79a7036abfc4b22",
+          "sourceShaderSha1": "e2e66a6bb3d4cc162df043f02106d2699a600389",
+          "simd": 16,
+          "instructions": 1136,
+          "loops": 0,
+          "estimatedCycles": 8360,
+          "spills": 0,
+          "fills": 0,
+          "sends": 133,
+          "scheduler": "non-lifo",
+          "promotedConstants": 10,
+          "grfRegisters": 128
+        },
+        {
+          "driverShaderHash": "0x580ca7030f598e7",
+          "sourceShaderSha1": "dbcbde0edb20ad6d58c0dc0e1c5a3b72110cd0b1",
+          "simd": 8,
+          "instructions": 3626,
+          "loops": 4,
+          "estimatedCycles": 524484,
+          "spills": 0,
+          "fills": 0,
+          "sends": 146,
+          "scheduler": "non-lifo",
+          "promotedConstants": 20,
+          "grfRegisters": 128
+        },
+        {
+          "driverShaderHash": "0x859e6b0efc6439f6",
+          "sourceShaderSha1": "940a0c96886f320234330b4d18cb6fa4d43f51ca",
+          "simd": 16,
+          "instructions": 1156,
+          "loops": 0,
+          "estimatedCycles": 14000,
+          "spills": 0,
+          "fills": 0,
+          "sends": 143,
+          "scheduler": "top-down",
+          "promotedConstants": 6,
+          "grfRegisters": 128
+        }
+      ],
+      "parserQualityCounts": {
+        "parsedPoints": 193473,
+        "globalTimestampReversals": 44298,
+        "eventsOutsideFrames": 269,
+        "orphanFrameEnds": 1,
+        "abandonedFrames": 0,
+        "invalidFrameTimestampPairs": 0,
+        "trailingIncompleteFrames": 1,
+        "trailingIncompletePairs": 218,
+        "missingComputeHash": 0,
+        "completeFramesWithPairingErrors": 0
+      }
+    },
+    {
+      "run": "B",
+      "experimentEnabled": true,
+      "intelDebug": "cs,cs-schedule-eval",
+      "completeFrameCount": 418,
+      "fullFrameMs": {
+        "mean": 45.182857,
+        "min": 42.69575,
+        "max": 49.219167,
+        "total": 18886.434098,
+        "median": 45.249916,
+        "p90": 46.063716,
+        "p95": 46.181962,
+        "sampleStddev": 0.784089
+      },
+      "shaderAggregates": [
+        {
+          "driverShaderHash": "0x79a7036abfc4b22",
+          "sourceShaderSha1": "e2e66a6bb3d4cc162df043f02106d2699a600389",
+          "count": 418,
+          "framesPresent": 418,
+          "meanCountPerFrame": 1,
+          "totalMs": 3333.734906,
+          "meanMsPerFrame": 7.975442,
+          "meanMsPerDispatch": 7.975442,
+          "minDispatchMs": 7.655583,
+          "maxDispatchMs": 8.207334,
+          "eventKindCounts": {
+            "compute": 418
+          }
+        },
+        {
+          "driverShaderHash": "0x580ca7030f598e7",
+          "sourceShaderSha1": "dbcbde0edb20ad6d58c0dc0e1c5a3b72110cd0b1",
+          "count": 418,
+          "framesPresent": 418,
+          "meanCountPerFrame": 1,
+          "totalMs": 2380.770837,
+          "meanMsPerFrame": 5.695624,
+          "meanMsPerDispatch": 5.695624,
+          "minDispatchMs": 4.67825,
+          "maxDispatchMs": 6.396917,
+          "eventKindCounts": {
+            "compute_indirect": 418
+          }
+        },
+        {
+          "driverShaderHash": "0x859e6b0efc6439f6",
+          "sourceShaderSha1": "940a0c96886f320234330b4d18cb6fa4d43f51ca",
+          "count": 418,
+          "framesPresent": 418,
+          "meanCountPerFrame": 1,
+          "totalMs": 2051.330249,
+          "meanMsPerFrame": 4.907489,
+          "meanMsPerDispatch": 4.907489,
+          "minDispatchMs": 4.3485,
+          "maxDispatchMs": 5.416083,
+          "eventKindCounts": {
+            "compute": 418
+          }
+        },
+        {
+          "driverShaderHash": "0x67fee361ac258949",
+          "count": 836,
+          "framesPresent": 418,
+          "meanCountPerFrame": 2,
+          "totalMs": 1126.69232,
+          "meanMsPerFrame": 2.695436,
+          "meanMsPerDispatch": 1.347718,
+          "minDispatchMs": 1.135917,
+          "maxDispatchMs": 1.582917,
+          "eventKindCounts": {
+            "compute": 836
+          }
+        },
+        {
+          "driverShaderHash": "0x7d0a8d69f0923615",
+          "count": 418,
+          "framesPresent": 418,
+          "meanCountPerFrame": 1,
+          "totalMs": 694.832395,
+          "meanMsPerFrame": 1.662278,
+          "meanMsPerDispatch": 1.662278,
+          "minDispatchMs": 1.549917,
+          "maxDispatchMs": 1.800084,
+          "eventKindCounts": {
+            "compute": 418
+          }
+        },
+        {
+          "driverShaderHash": "0x21ee37b6995f4597",
+          "count": 418,
+          "framesPresent": 418,
+          "meanCountPerFrame": 1,
+          "totalMs": 495.653685,
+          "meanMsPerFrame": 1.185774,
+          "meanMsPerDispatch": 1.185774,
+          "minDispatchMs": 1.113667,
+          "maxDispatchMs": 1.30625,
+          "eventKindCounts": {
+            "compute": 418
+          }
+        },
+        {
+          "driverShaderHash": "0x20c6f01908e83ed5",
+          "count": 836,
+          "framesPresent": 418,
+          "meanCountPerFrame": 2,
+          "totalMs": 233.422924,
+          "meanMsPerFrame": 0.558428,
+          "meanMsPerDispatch": 0.279214,
+          "minDispatchMs": 0.01,
+          "maxDispatchMs": 0.6175,
+          "eventKindCounts": {
+            "compute": 836
+          }
+        },
+        {
+          "driverShaderHash": "0x89a9973430c58a25",
+          "count": 418,
+          "framesPresent": 418,
+          "meanCountPerFrame": 1,
+          "totalMs": 221.363502,
+          "meanMsPerFrame": 0.529578,
+          "meanMsPerDispatch": 0.529578,
+          "minDispatchMs": 0.48325,
+          "maxDispatchMs": 0.709916,
+          "eventKindCounts": {
+            "compute": 418
+          }
+        },
+        {
+          "driverShaderHash": "0xe9049ae1af45c8d0",
+          "count": 418,
+          "framesPresent": 418,
+          "meanCountPerFrame": 1,
+          "totalMs": 211.026749,
+          "meanMsPerFrame": 0.504849,
+          "meanMsPerDispatch": 0.504849,
+          "minDispatchMs": 0.389417,
+          "maxDispatchMs": 0.62375,
+          "eventKindCounts": {
+            "compute": 418
+          }
+        },
+        {
+          "driverShaderHash": "0xf5a7fce76a4bf918",
+          "count": 418,
+          "framesPresent": 418,
+          "meanCountPerFrame": 1,
+          "totalMs": 139.825333,
+          "meanMsPerFrame": 0.33451,
+          "meanMsPerDispatch": 0.33451,
+          "minDispatchMs": 0.2765,
+          "maxDispatchMs": 0.422667,
+          "eventKindCounts": {
+            "compute": 418
+          }
+        },
+        {
+          "driverShaderHash": "0xe30091718f7e0a57",
+          "count": 275,
+          "framesPresent": 275,
+          "meanCountPerFrame": 0.657895,
+          "totalMs": 133.909344,
+          "meanMsPerFrame": 0.320357,
+          "meanMsPerDispatch": 0.486943,
+          "minDispatchMs": 0.44925,
+          "maxDispatchMs": 0.602,
+          "eventKindCounts": {
+            "compute": 275
+          }
+        },
+        {
+          "driverShaderHash": "0x3f9eb268f1cf745d",
+          "count": 836,
+          "framesPresent": 418,
+          "meanCountPerFrame": 2,
+          "totalMs": 98.919735,
+          "meanMsPerFrame": 0.23665,
+          "meanMsPerDispatch": 0.118325,
+          "minDispatchMs": 0.008833,
+          "maxDispatchMs": 0.25925,
+          "eventKindCounts": {
+            "compute": 836
+          }
+        },
+        {
+          "driverShaderHash": "0x58e9835e31fbec6e",
+          "count": 2508,
+          "framesPresent": 418,
+          "meanCountPerFrame": 6,
+          "totalMs": 44.601,
+          "meanMsPerFrame": 0.106701,
+          "meanMsPerDispatch": 0.017783,
+          "minDispatchMs": 0.00625,
+          "maxDispatchMs": 0.08075,
+          "eventKindCounts": {
+            "compute": 2508
+          }
+        },
+        {
+          "driverShaderHash": "0x589ee41905ff5ed2",
+          "count": 418,
+          "framesPresent": 418,
+          "meanCountPerFrame": 1,
+          "totalMs": 42.449332,
+          "meanMsPerFrame": 0.101553,
+          "meanMsPerDispatch": 0.101553,
+          "minDispatchMs": 0.094,
+          "maxDispatchMs": 0.12825,
+          "eventKindCounts": {
+            "compute": 418
+          }
+        },
+        {
+          "driverShaderHash": "0x7fb288e8342a1654",
+          "count": 418,
+          "framesPresent": 418,
+          "meanCountPerFrame": 1,
+          "totalMs": 32.263417,
+          "meanMsPerFrame": 0.077185,
+          "meanMsPerDispatch": 0.077185,
+          "minDispatchMs": 0.0705,
+          "maxDispatchMs": 0.093834,
+          "eventKindCounts": {
+            "compute": 418
+          }
+        },
+        {
+          "driverShaderHash": "0xbbea6fdb69c64db8",
+          "count": 271,
+          "framesPresent": 271,
+          "meanCountPerFrame": 0.648325,
+          "totalMs": 30.852496,
+          "meanMsPerFrame": 0.07381,
+          "meanMsPerDispatch": 0.113847,
+          "minDispatchMs": 0.106417,
+          "maxDispatchMs": 0.153333,
+          "eventKindCounts": {
+            "compute": 271
+          }
+        },
+        {
+          "driverShaderHash": "0xccbdee0a8db99d2",
+          "count": 418,
+          "framesPresent": 418,
+          "meanCountPerFrame": 1,
+          "totalMs": 30.219327,
+          "meanMsPerFrame": 0.072295,
+          "meanMsPerDispatch": 0.072295,
+          "minDispatchMs": 0.064917,
+          "maxDispatchMs": 0.098583,
+          "eventKindCounts": {
+            "compute": 418
+          }
+        },
+        {
+          "driverShaderHash": "0x88755165cbb69e62",
+          "count": 418,
+          "framesPresent": 418,
+          "meanCountPerFrame": 1,
+          "totalMs": 18.864506,
+          "meanMsPerFrame": 0.04513,
+          "meanMsPerDispatch": 0.04513,
+          "minDispatchMs": 0.04025,
+          "maxDispatchMs": 0.0605,
+          "eventKindCounts": {
+            "compute": 418
+          }
+        },
+        {
+          "driverShaderHash": "0x679d02ecfdde56c4",
+          "count": 147,
+          "framesPresent": 147,
+          "meanCountPerFrame": 0.351675,
+          "totalMs": 12.221088,
+          "meanMsPerFrame": 0.029237,
+          "meanMsPerDispatch": 0.083137,
+          "minDispatchMs": 0.077167,
+          "maxDispatchMs": 0.10025,
+          "eventKindCounts": {
+            "compute": 147
+          }
+        },
+        {
+          "driverShaderHash": "0x3aa72c56510c16be",
+          "count": 147,
+          "framesPresent": 147,
+          "meanCountPerFrame": 0.351675,
+          "totalMs": 5.922994,
+          "meanMsPerFrame": 0.01417,
+          "meanMsPerDispatch": 0.040292,
+          "minDispatchMs": 0.0365,
+          "maxDispatchMs": 0.05425,
+          "eventKindCounts": {
+            "compute": 147
+          }
+        }
+      ],
+      "eventKindAggregates": [
+        {
+          "kind": "compute",
+          "count": 10454,
+          "totalMs": 8958.105302,
+          "meanMsPerFrame": 21.430874
+        },
+        {
+          "kind": "render_pass",
+          "count": 23974,
+          "totalMs": 6477.002423,
+          "meanMsPerFrame": 15.495221
+        },
+        {
+          "kind": "blorp",
+          "count": 61212,
+          "totalMs": 2772.564197,
+          "meanMsPerFrame": 6.632929
+        },
+        {
+          "kind": "compute_indirect",
+          "count": 418,
+          "totalMs": 2380.770837,
+          "meanMsPerFrame": 5.695624
+        }
+      ],
+      "nativeTop3": [
+        {
+          "driverShaderHash": "0x79a7036abfc4b22",
+          "sourceShaderSha1": "e2e66a6bb3d4cc162df043f02106d2699a600389",
+          "simd": 16,
+          "instructions": 1136,
+          "loops": 0,
+          "estimatedCycles": 8360,
+          "spills": 0,
+          "fills": 0,
+          "sends": 133,
+          "scheduler": "non-lifo",
+          "promotedConstants": 10,
+          "grfRegisters": 128
+        },
+        {
+          "driverShaderHash": "0x859e6b0efc6439f6",
+          "sourceShaderSha1": "940a0c96886f320234330b4d18cb6fa4d43f51ca",
+          "simd": 16,
+          "instructions": 1156,
+          "loops": 0,
+          "estimatedCycles": 14032,
+          "spills": 0,
+          "fills": 0,
+          "sends": 143,
+          "scheduler": "latency-sensitive",
+          "promotedConstants": 6,
+          "grfRegisters": 128
+        },
+        {
+          "driverShaderHash": "0x580ca7030f598e7",
+          "sourceShaderSha1": "dbcbde0edb20ad6d58c0dc0e1c5a3b72110cd0b1",
+          "simd": 8,
+          "instructions": 3626,
+          "loops": 4,
+          "estimatedCycles": 524484,
+          "spills": 0,
+          "fills": 0,
+          "sends": 146,
+          "scheduler": "non-lifo",
+          "promotedConstants": 20,
+          "grfRegisters": 128
+        }
+      ],
+      "parserQualityCounts": {
+        "parsedPoints": 193613,
+        "globalTimestampReversals": 44124,
+        "eventsOutsideFrames": 217,
+        "orphanFrameEnds": 1,
+        "abandonedFrames": 0,
+        "invalidFrameTimestampPairs": 0,
+        "trailingIncompleteFrames": 1,
+        "trailingIncompletePairs": 221,
+        "missingComputeHash": 0,
+        "completeFramesWithPairingErrors": 0
+      }
+    },
+    {
+      "run": "A2",
+      "experimentEnabled": false,
+      "intelDebug": "cs",
+      "completeFrameCount": 421,
+      "fullFrameMs": {
+        "mean": 45.227752,
+        "min": 43.33625,
+        "max": 47.151,
+        "total": 19040.883661,
+        "median": 45.35,
+        "p90": 45.976333,
+        "p95": 46.1785,
+        "sampleStddev": 0.674554
+      },
+      "shaderAggregates": [
+        {
+          "driverShaderHash": "0x79a7036abfc4b22",
+          "sourceShaderSha1": "e2e66a6bb3d4cc162df043f02106d2699a600389",
+          "count": 421,
+          "framesPresent": 421,
+          "meanCountPerFrame": 1,
+          "totalMs": 3415.392996,
+          "meanMsPerFrame": 8.112572,
+          "meanMsPerDispatch": 8.112572,
+          "minDispatchMs": 7.605834,
+          "maxDispatchMs": 8.333667,
+          "eventKindCounts": {
+            "compute": 421
+          }
+        },
+        {
+          "driverShaderHash": "0x580ca7030f598e7",
+          "sourceShaderSha1": "dbcbde0edb20ad6d58c0dc0e1c5a3b72110cd0b1",
+          "count": 421,
+          "framesPresent": 421,
+          "meanCountPerFrame": 1,
+          "totalMs": 2421.318832,
+          "meanMsPerFrame": 5.751351,
+          "meanMsPerDispatch": 5.751351,
+          "minDispatchMs": 4.71625,
+          "maxDispatchMs": 6.43275,
+          "eventKindCounts": {
+            "compute_indirect": 421
+          }
+        },
+        {
+          "driverShaderHash": "0x859e6b0efc6439f6",
+          "sourceShaderSha1": "940a0c96886f320234330b4d18cb6fa4d43f51ca",
+          "count": 421,
+          "framesPresent": 421,
+          "meanCountPerFrame": 1,
+          "totalMs": 2082.95776,
+          "meanMsPerFrame": 4.947643,
+          "meanMsPerDispatch": 4.947643,
+          "minDispatchMs": 4.48575,
+          "maxDispatchMs": 5.418666,
+          "eventKindCounts": {
+            "compute": 421
+          }
+        },
+        {
+          "driverShaderHash": "0x67fee361ac258949",
+          "count": 842,
+          "framesPresent": 421,
+          "meanCountPerFrame": 2,
+          "totalMs": 1140.973414,
+          "meanMsPerFrame": 2.710151,
+          "meanMsPerDispatch": 1.355075,
+          "minDispatchMs": 1.1295,
+          "maxDispatchMs": 1.648584,
+          "eventKindCounts": {
+            "compute": 842
+          }
+        },
+        {
+          "driverShaderHash": "0x7d0a8d69f0923615",
+          "count": 421,
+          "framesPresent": 421,
+          "meanCountPerFrame": 1,
+          "totalMs": 705.809591,
+          "meanMsPerFrame": 1.676507,
+          "meanMsPerDispatch": 1.676507,
+          "minDispatchMs": 1.613417,
+          "maxDispatchMs": 1.778584,
+          "eventKindCounts": {
+            "compute": 421
+          }
+        },
+        {
+          "driverShaderHash": "0x21ee37b6995f4597",
+          "count": 421,
+          "framesPresent": 421,
+          "meanCountPerFrame": 1,
+          "totalMs": 505.523234,
+          "meanMsPerFrame": 1.200768,
+          "meanMsPerDispatch": 1.200768,
+          "minDispatchMs": 1.145167,
+          "maxDispatchMs": 1.242583,
+          "eventKindCounts": {
+            "compute": 421
+          }
+        },
+        {
+          "driverShaderHash": "0x20c6f01908e83ed5",
+          "count": 842,
+          "framesPresent": 421,
+          "meanCountPerFrame": 2,
+          "totalMs": 242.549589,
+          "meanMsPerFrame": 0.576127,
+          "meanMsPerDispatch": 0.288064,
+          "minDispatchMs": 0.01,
+          "maxDispatchMs": 0.592417,
+          "eventKindCounts": {
+            "compute": 842
+          }
+        },
+        {
+          "driverShaderHash": "0x89a9973430c58a25",
+          "count": 421,
+          "framesPresent": 421,
+          "meanCountPerFrame": 1,
+          "totalMs": 229.847248,
+          "meanMsPerFrame": 0.545955,
+          "meanMsPerDispatch": 0.545955,
+          "minDispatchMs": 0.495667,
+          "maxDispatchMs": 0.6165,
+          "eventKindCounts": {
+            "compute": 421
+          }
+        },
+        {
+          "driverShaderHash": "0xe9049ae1af45c8d0",
+          "count": 421,
+          "framesPresent": 421,
+          "meanCountPerFrame": 1,
+          "totalMs": 214.055423,
+          "meanMsPerFrame": 0.508445,
+          "meanMsPerDispatch": 0.508445,
+          "minDispatchMs": 0.4355,
+          "maxDispatchMs": 0.669084,
+          "eventKindCounts": {
+            "compute": 421
+          }
+        },
+        {
+          "driverShaderHash": "0xf5a7fce76a4bf918",
+          "count": 421,
+          "framesPresent": 421,
+          "meanCountPerFrame": 1,
+          "totalMs": 145.965081,
+          "meanMsPerFrame": 0.34671,
+          "meanMsPerDispatch": 0.34671,
+          "minDispatchMs": 0.30925,
+          "maxDispatchMs": 0.461167,
+          "eventKindCounts": {
+            "compute": 421
+          }
+        },
+        {
+          "driverShaderHash": "0xe30091718f7e0a57",
+          "count": 281,
+          "framesPresent": 281,
+          "meanCountPerFrame": 0.667458,
+          "totalMs": 137.276824,
+          "meanMsPerFrame": 0.326073,
+          "meanMsPerDispatch": 0.48853,
+          "minDispatchMs": 0.44675,
+          "maxDispatchMs": 0.620666,
+          "eventKindCounts": {
+            "compute": 281
+          }
+        },
+        {
+          "driverShaderHash": "0x3f9eb268f1cf745d",
+          "count": 842,
+          "framesPresent": 421,
+          "meanCountPerFrame": 2,
+          "totalMs": 99.709568,
+          "meanMsPerFrame": 0.23684,
+          "meanMsPerDispatch": 0.11842,
+          "minDispatchMs": 0.008666,
+          "maxDispatchMs": 0.252667,
+          "eventKindCounts": {
+            "compute": 842
+          }
+        },
+        {
+          "driverShaderHash": "0x58e9835e31fbec6e",
+          "count": 2526,
+          "framesPresent": 421,
+          "meanCountPerFrame": 6,
+          "totalMs": 47.751022,
+          "meanMsPerFrame": 0.113423,
+          "meanMsPerDispatch": 0.018904,
+          "minDispatchMs": 0.006667,
+          "maxDispatchMs": 0.073167,
+          "eventKindCounts": {
+            "compute": 2526
+          }
+        },
+        {
+          "driverShaderHash": "0xbbea6fdb69c64db8",
+          "count": 421,
+          "framesPresent": 421,
+          "meanCountPerFrame": 1,
+          "totalMs": 47.533667,
+          "meanMsPerFrame": 0.112907,
+          "meanMsPerDispatch": 0.112907,
+          "minDispatchMs": 0.109833,
+          "maxDispatchMs": 0.128834,
+          "eventKindCounts": {
+            "compute": 421
+          }
+        },
+        {
+          "driverShaderHash": "0x589ee41905ff5ed2",
+          "count": 421,
+          "framesPresent": 421,
+          "meanCountPerFrame": 1,
+          "totalMs": 40.899087,
+          "meanMsPerFrame": 0.097147,
+          "meanMsPerDispatch": 0.097147,
+          "minDispatchMs": 0.088084,
+          "maxDispatchMs": 0.113834,
+          "eventKindCounts": {
+            "compute": 421
+          }
+        },
+        {
+          "driverShaderHash": "0x7fb288e8342a1654",
+          "count": 421,
+          "framesPresent": 421,
+          "meanCountPerFrame": 1,
+          "totalMs": 32.024159,
+          "meanMsPerFrame": 0.076067,
+          "meanMsPerDispatch": 0.076067,
+          "minDispatchMs": 0.07325,
+          "maxDispatchMs": 0.092917,
+          "eventKindCounts": {
+            "compute": 421
+          }
+        },
+        {
+          "driverShaderHash": "0xccbdee0a8db99d2",
+          "count": 421,
+          "framesPresent": 421,
+          "meanCountPerFrame": 1,
+          "totalMs": 30.406994,
+          "meanMsPerFrame": 0.072226,
+          "meanMsPerDispatch": 0.072226,
+          "minDispatchMs": 0.071,
+          "maxDispatchMs": 0.088916,
+          "eventKindCounts": {
+            "compute": 421
+          }
+        },
+        {
+          "driverShaderHash": "0x88755165cbb69e62",
+          "count": 421,
+          "framesPresent": 421,
+          "meanCountPerFrame": 1,
+          "totalMs": 19.090083,
+          "meanMsPerFrame": 0.045345,
+          "meanMsPerDispatch": 0.045345,
+          "minDispatchMs": 0.042166,
+          "maxDispatchMs": 0.060416,
+          "eventKindCounts": {
+            "compute": 421
+          }
+        }
+      ],
+      "eventKindAggregates": [
+        {
+          "kind": "compute",
+          "count": 10385,
+          "totalMs": 9137.76574,
+          "meanMsPerFrame": 21.704907
+        },
+        {
+          "kind": "render_pass",
+          "count": 24418,
+          "totalMs": 6565.076867,
+          "meanMsPerFrame": 15.594007
+        },
+        {
+          "kind": "compute_indirect",
+          "count": 421,
+          "totalMs": 2421.318832,
+          "meanMsPerFrame": 5.751351
+        },
+        {
+          "kind": "blorp",
+          "count": 61189,
+          "totalMs": 1608.996407,
+          "meanMsPerFrame": 3.821844
+        }
+      ],
+      "nativeTop3": [
+        {
+          "driverShaderHash": "0x79a7036abfc4b22",
+          "sourceShaderSha1": "e2e66a6bb3d4cc162df043f02106d2699a600389",
+          "simd": 16,
+          "instructions": 1136,
+          "loops": 0,
+          "estimatedCycles": 8360,
+          "spills": 0,
+          "fills": 0,
+          "sends": 133,
+          "scheduler": "non-lifo",
+          "promotedConstants": 10,
+          "grfRegisters": 128
+        },
+        {
+          "driverShaderHash": "0x859e6b0efc6439f6",
+          "sourceShaderSha1": "940a0c96886f320234330b4d18cb6fa4d43f51ca",
+          "simd": 16,
+          "instructions": 1156,
+          "loops": 0,
+          "estimatedCycles": 14000,
+          "spills": 0,
+          "fills": 0,
+          "sends": 143,
+          "scheduler": "top-down",
+          "promotedConstants": 6,
+          "grfRegisters": 128
+        },
+        {
+          "driverShaderHash": "0x580ca7030f598e7",
+          "sourceShaderSha1": "dbcbde0edb20ad6d58c0dc0e1c5a3b72110cd0b1",
+          "simd": 8,
+          "instructions": 3626,
+          "loops": 4,
+          "estimatedCycles": 524484,
+          "spills": 0,
+          "fills": 0,
+          "sends": 146,
+          "scheduler": "non-lifo",
+          "promotedConstants": 20,
+          "grfRegisters": 128
+        }
+      ],
+      "parserQualityCounts": {
+        "parsedPoints": 194369,
+        "globalTimestampReversals": 44244,
+        "eventsOutsideFrames": 261,
+        "orphanFrameEnds": 1,
+        "abandonedFrames": 0,
+        "invalidFrameTimestampPairs": 0,
+        "trailingIncompleteFrames": 1,
+        "trailingIncompletePairs": 219,
+        "missingComputeHash": 0,
+        "completeFramesWithPairingErrors": 0
+      }
+    }
+  ],
+  "comparison": {
+    "offEndpointMeansMs": [
+      44.977907,
+      45.227752
+    ],
+    "onMeanMs": 45.182857,
+    "offMidpointMeanMs": 45.1028295,
+    "onMinusFirstOffMs": 0.20495,
+    "onVsFirstOffPercent": 0.455668157,
+    "onMinusOffMidpointMs": 0.0800275,
+    "onVsOffMidpointPercent": 0.177433436,
+    "offEndpointDriftMs": 0.249845,
+    "offEndpointDriftPercent": 0.555483829,
+    "interpretation": "No observed gain. Drift and one A/B/A series do not establish a statistically significant regression; keep disabled."
+  },
+  "syntheticIntegerOnly": {
+    "kernelCount": 1,
+    "spirvWordCount": 951,
+    "immutableHarnessHash": "610e6fd96e040088",
+    "runs": [
+      {
+        "mode": "A1_off",
+        "exitStatus": 0,
+        "exactReadbacks": 6,
+        "mismatches": 0,
+        "aggregate": "7d5418d86d2d49fc"
+      },
+      {
+        "mode": "B_on",
+        "exitStatus": 0,
+        "exactReadbacks": 6,
+        "mismatches": 0,
+        "aggregate": "7d5418d86d2d49fc"
+      },
+      {
+        "mode": "A2_off",
+        "exitStatus": 0,
+        "exactReadbacks": 6,
+        "mismatches": 0,
+        "aggregate": "7d5418d86d2d49fc"
+      }
+    ],
+    "inputsUnchanged": true,
+    "canariesIntact": true,
+    "limits": "Integer-only original synthetic kernel. Not floating-point, typed-image, game shader, full compiler correctness, or performance coverage."
+  }
+}

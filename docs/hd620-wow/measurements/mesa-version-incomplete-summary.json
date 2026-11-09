@@ -1,0 +1,129 @@
+{
+  "date": "2026-11-09",
+  "conclusion": "INCONCLUSIVE. Return invalid; no Mesa winner/regression established. No permanent driver change.",
+  "runs": [
+    {
+      "tag": "mesa262-ordinary-a",
+      "status": "STATIONARY_LIVE_SCENE_BACKGROUND_DIFFERS",
+      "rows": 73,
+      "first": "2026-11-09 20:38:59.945",
+      "last": "2026-11-09 20:40:13.537",
+      "elapsedSeconds": 73.592,
+      "metrics": {
+        "FPS": {
+          "mean": 21.542465753424658,
+          "min": 20.8,
+          "max": 22.2
+        },
+        "Ave Frame Time (ms)": {
+          "mean": 46.42438356164385,
+          "min": 45.08,
+          "max": 48.09
+        },
+        "Ave Cpu Frame Time (ms)": {
+          "mean": 19.56958904109588,
+          "min": 17.92,
+          "max": 23.53
+        },
+        "Ave Gpu Render Time (ms)": {
+          "mean": 44.55835616438356,
+          "min": 42.5,
+          "max": 45.41
+        },
+        "Ave Gpu Wait Time (ms)": {
+          "mean": 26.752876712328767,
+          "min": 22.66,
+          "max": 28.94
+        },
+        "Is Gpu Bound": {
+          "mean": 1,
+          "min": 1,
+          "max": 1
+        }
+      },
+      "note": "Engine approximately one-second aggregates, not per-frame percentiles. Timestamp strings are local; UTC parsing used only for same-session duration."
+    },
+    {
+      "tag": "mesa261-ordinary-b",
+      "status": "STATIONARY_LIVE_SCENE_BACKGROUND_DIFFERS",
+      "rows": 72,
+      "first": "2026-11-09 20:48:22.387",
+      "last": "2026-11-09 20:49:35.337",
+      "elapsedSeconds": 72.95,
+      "metrics": {
+        "FPS": {
+          "mean": 22.11666666666667,
+          "min": 21.6,
+          "max": 22.4
+        },
+        "Ave Frame Time (ms)": {
+          "mean": 45.230416666666684,
+          "min": 44.56,
+          "max": 46.24
+        },
+        "Ave Cpu Frame Time (ms)": {
+          "mean": 15.99597222222222,
+          "min": 13.35,
+          "max": 20.59
+        },
+        "Ave Gpu Render Time (ms)": {
+          "mean": 42.740416666666675,
+          "min": 40.94,
+          "max": 44.49
+        },
+        "Ave Gpu Wait Time (ms)": {
+          "mean": 29.11361111111111,
+          "min": 24.57,
+          "max": 32.53
+        },
+        "Is Gpu Bound": {
+          "mean": 1,
+          "min": 1,
+          "max": 1
+        }
+      },
+      "note": "Engine approximately one-second aggregates, not per-frame percentiles. Timestamp strings are local; UTC parsing used only for same-session duration."
+    },
+    {
+      "tag": "mesa262-ordinary-return",
+      "status": "INVALID_RETURN_CHANGED_CHARACTER_CAMERA_AND_BACKGROUND",
+      "rows": 73,
+      "first": "2026-11-09 20:56:43.394",
+      "last": "2026-11-09 20:57:56.784",
+      "elapsedSeconds": 73.39,
+      "metrics": {
+        "FPS": {
+          "mean": 18.83561643835617,
+          "min": 14.3,
+          "max": 20.5
+        },
+        "Ave Frame Time (ms)": {
+          "mean": 53.74246575342464,
+          "min": 48.85,
+          "max": 69.77
+        },
+        "Ave Cpu Frame Time (ms)": {
+          "mean": 16.8545205479452,
+          "min": 12.64,
+          "max": 28.03
+        },
+        "Ave Gpu Render Time (ms)": {
+          "mean": 52.47301369863015,
+          "min": 46.67,
+          "max": 68.21
+        },
+        "Ave Gpu Wait Time (ms)": {
+          "mean": 36.809315068493156,
+          "min": 26.76,
+          "max": 54.88
+        },
+        "Is Gpu Bound": {
+          "mean": 1,
+          "min": 1,
+          "max": 1
+        }
+      },
+      "note": "Engine approximately one-second aggregates, not per-frame percentiles. Timestamp strings are local; UTC parsing used only for same-session duration."
+    }
+  ]
+}

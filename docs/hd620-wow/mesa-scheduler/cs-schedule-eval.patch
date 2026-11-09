@@ -1,0 +1,55 @@
+--- a/src/intel/dev/intel_debug.h
++++ b/src/intel/dev/intel_debug.h
+@@ -86,6 +86,7 @@
+    DEBUG_DISPATCH_BKP,
+    DEBUG_BATCH_STATS,
+    DEBUG_REG_PRESSURE,
++   DEBUG_CS_SCHEDULE_EVAL,
+    DEBUG_SHADER_PRINT,
+    DEBUG_CL_QUIET,
+    DEBUG_BVH_BLAS,
+--- a/src/intel/dev/intel_debug.c
++++ b/src/intel/dev/intel_debug.c
+@@ -121,6 +121,7 @@
+    OPT1("dispatch_bkp",      DEBUG_DISPATCH_BKP),
+    OPT1("bat-stats",         DEBUG_BATCH_STATS),
+    OPT1("reg-pressure",      DEBUG_REG_PRESSURE),
++   OPT1("cs-schedule-eval",  DEBUG_CS_SCHEDULE_EVAL),
+    OPT1("shader-print",      DEBUG_SHADER_PRINT),
+    OPT1("cl-quiet",          DEBUG_CL_QUIET),
+    OPT1("no-send-gather",    DEBUG_NO_SEND_GATHER),
+--- a/src/intel/compiler/brw/brw_compiler.c
++++ b/src/intel/compiler/brw/brw_compiler.c
+@@ -271,6 +271,7 @@
+       DEBUG_NO_SEND_GATHER,
+       DEBUG_NO_VRT,
+       DEBUG_NO_FILL_OPT,
++      DEBUG_CS_SCHEDULE_EVAL,
+    };
+    for (uint32_t i = 0; i < ARRAY_SIZE(debug_bits); i++) {
+       insert_u64_bit(&config, INTEL_DEBUG(debug_bits[i]));
+--- a/src/intel/compiler/brw/brw_shader.cpp
++++ b/src/intel/compiler/brw/brw_shader.cpp
+@@ -651,6 +651,9 @@
+ {
+    const struct intel_device_info *devinfo = s.devinfo;
+    const nir_shader *nir = s.nir;
++   const bool evaluate_cs_schedules =
++      INTEL_DEBUG(DEBUG_CS_SCHEDULE_EVAL) &&
++      s.stage == MESA_SHADER_COMPUTE && devinfo->ver < 30;
+    bool allocated;
+ 
+    enum brw_instruction_scheduler_mode pre_modes[] = {
+@@ -711,8 +714,11 @@
+       /* Only use the PRE heuristic on pre-xe3 platforms during the
+        * first pass, since the trade-off between EU thread count and
+        * GRF use isn't a concern on platforms that don't support VRT.
++       * The opt-in compute experiment evaluates this same bounded
++       * candidate list; register-allocation fallback is unchanged.
+        */
+-      if (devinfo->ver < 30 && sched_mode != BRW_SCHEDULE_PRE)
++      if (devinfo->ver < 30 && sched_mode != BRW_SCHEDULE_PRE &&
++          !evaluate_cs_schedules)
+          continue;
+ 
+       /* These don't appear to provide much benefit on xe3+.

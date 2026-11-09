@@ -1,0 +1,430 @@
+{
+  "date": "2026-11-09",
+  "ordinaryDxvkComparison": [
+    {
+      "tag": "dxvk31-ordinary-a",
+      "rows": 103,
+      "first": "2026-11-09 19:48:32.717",
+      "last": "2026-11-09 19:50:16.481",
+      "elapsedSeconds": 103.764,
+      "metrics": {
+        "FPS": {
+          "mean": 20.720388349514558,
+          "min": 20.3,
+          "max": 21.1
+        },
+        "Ave Frame Time (ms)": {
+          "mean": 48.25660194174755,
+          "min": 47.33,
+          "max": 49.24
+        },
+        "Ave Cpu Frame Time (ms)": {
+          "mean": 15.269320388349508,
+          "min": 11.1,
+          "max": 22.62
+        },
+        "Ave Gpu Render Time (ms)": {
+          "mean": 46.399611650485454,
+          "min": 45.48,
+          "max": 47.31
+        },
+        "Ave Gpu Wait Time (ms)": {
+          "mean": 32.90262135922331,
+          "min": 26.08,
+          "max": 37.22
+        },
+        "Is Gpu Bound": {
+          "mean": 1,
+          "min": 1,
+          "max": 1
+        }
+      },
+      "note": "Engine approximately one-second aggregates, not per-frame percentiles. Timestamp strings are local; UTC parsing used only for same-session duration."
+    },
+    {
+      "tag": "dxvk27-ordinary-b",
+      "rows": 137,
+      "first": "2026-11-09 19:57:22.085",
+      "last": "2026-11-09 19:59:41.434",
+      "elapsedSeconds": 139.349,
+      "metrics": {
+        "FPS": {
+          "mean": 22.386861313868618,
+          "min": 21.9,
+          "max": 23.1
+        },
+        "Ave Frame Time (ms)": {
+          "mean": 44.67912408759124,
+          "min": 43.23,
+          "max": 45.69
+        },
+        "Ave Cpu Frame Time (ms)": {
+          "mean": 15.410875912408763,
+          "min": 10.72,
+          "max": 21.89
+        },
+        "Ave Gpu Render Time (ms)": {
+          "mean": 42.68934306569343,
+          "min": 40.99,
+          "max": 43.97
+        },
+        "Ave Gpu Wait Time (ms)": {
+          "mean": 29.16437956204379,
+          "min": 22.96,
+          "max": 34.63
+        },
+        "Is Gpu Bound": {
+          "mean": 1,
+          "min": 1,
+          "max": 1
+        }
+      },
+      "note": "Engine approximately one-second aggregates, not per-frame percentiles. Timestamp strings are local; UTC parsing used only for same-session duration."
+    },
+    {
+      "tag": "dxvk31-ordinary-return",
+      "rows": 115,
+      "first": "2026-11-09 20:07:47.639",
+      "last": "2026-11-09 20:09:43.826",
+      "elapsedSeconds": 116.187,
+      "metrics": {
+        "FPS": {
+          "mean": 20.636521739130437,
+          "min": 20.3,
+          "max": 21
+        },
+        "Ave Frame Time (ms)": {
+          "mean": 48.46139130434784,
+          "min": 47.58,
+          "max": 49.35
+        },
+        "Ave Cpu Frame Time (ms)": {
+          "mean": 17.46417391304348,
+          "min": 12.66,
+          "max": 22.6
+        },
+        "Ave Gpu Render Time (ms)": {
+          "mean": 46.802347826086944,
+          "min": 45.68,
+          "max": 47.73
+        },
+        "Ave Gpu Wait Time (ms)": {
+          "mean": 30.91895652173913,
+          "min": 25.63,
+          "max": 36.12
+        },
+        "Is Gpu Bound": {
+          "mean": 1,
+          "min": 1,
+          "max": 1
+        }
+      },
+      "note": "Engine approximately one-second aggregates, not per-frame percentiles. Timestamp strings are local; UTC parsing used only for same-session duration."
+    }
+  ],
+  "rawStructuredBufferTraces": [
+    {
+      "tag": "buffer-default",
+      "completeFrameCount": 415,
+      "fullFrameMs": {
+        "mean": 45.858487,
+        "min": 43.352417,
+        "max": 49.280667,
+        "total": 19031.272007
+      },
+      "top3": [
+        {
+          "hash": "0x79a7036abfc4b22",
+          "count": 415,
+          "framesPresent": 415,
+          "meanCountPerFrame": 1,
+          "totalMs": 3225.952245,
+          "meanMsPerFrame": 7.773379,
+          "meanMsPerDispatch": 7.773379,
+          "minDispatchMs": 7.535,
+          "maxDispatchMs": 8.10425,
+          "eventKinds": {
+            "compute": 415
+          },
+          "groupDimensions": [
+            {
+              "eventKind": "compute",
+              "known": true,
+              "groups": [
+                256,
+                128,
+                1
+              ],
+              "reportedIndirectSize": null,
+              "count": 415,
+              "framesPresent": 415,
+              "meanMsPerFrame": 7.773379,
+              "meanMsPerDispatch": 7.773379
+            }
+          ]
+        },
+        {
+          "hash": "0x580ca7030f598e7",
+          "count": 415,
+          "framesPresent": 415,
+          "meanCountPerFrame": 1,
+          "totalMs": 2736.239245,
+          "meanMsPerFrame": 6.593348,
+          "meanMsPerDispatch": 6.593348,
+          "minDispatchMs": 4.892667,
+          "maxDispatchMs": 7.652417,
+          "eventKinds": {
+            "compute_indirect": 415
+          },
+          "groupDimensions": [
+            {
+              "eventKind": "compute_indirect",
+              "known": false,
+              "groups": null,
+              "reportedIndirectSize": "0x0x0",
+              "count": 415,
+              "framesPresent": 415,
+              "meanMsPerFrame": 6.593348,
+              "meanMsPerDispatch": 6.593348
+            }
+          ]
+        },
+        {
+          "hash": "0x859e6b0efc6439f6",
+          "count": 415,
+          "framesPresent": 415,
+          "meanCountPerFrame": 1,
+          "totalMs": 2055.630503,
+          "meanMsPerFrame": 4.953327,
+          "meanMsPerDispatch": 4.953327,
+          "minDispatchMs": 4.4825,
+          "maxDispatchMs": 5.529583,
+          "eventKinds": {
+            "compute": 415
+          },
+          "groupDimensions": [
+            {
+              "eventKind": "compute",
+              "known": true,
+              "groups": [
+                256,
+                128,
+                1
+              ],
+              "reportedIndirectSize": null,
+              "count": 415,
+              "framesPresent": 415,
+              "meanMsPerFrame": 4.953327,
+              "meanMsPerDispatch": 4.953327
+            }
+          ]
+        }
+      ],
+      "pairingErrors": 0
+    },
+    {
+      "tag": "buffer-texel",
+      "completeFrameCount": 417,
+      "fullFrameMs": {
+        "mean": 48.117591,
+        "min": 45.324583,
+        "max": 51.281917,
+        "total": 20065.035335
+      },
+      "top3": [
+        {
+          "hash": "0xd37d8e5dd47a4f1e",
+          "count": 417,
+          "framesPresent": 417,
+          "meanCountPerFrame": 1,
+          "totalMs": 3722.358739,
+          "meanMsPerFrame": 8.92652,
+          "meanMsPerDispatch": 8.92652,
+          "minDispatchMs": 6.378916,
+          "maxDispatchMs": 10.462834,
+          "eventKinds": {
+            "compute_indirect": 417
+          },
+          "groupDimensions": [
+            {
+              "eventKind": "compute_indirect",
+              "known": false,
+              "groups": null,
+              "reportedIndirectSize": "0x0x0",
+              "count": 417,
+              "framesPresent": 417,
+              "meanMsPerFrame": 8.92652,
+              "meanMsPerDispatch": 8.92652
+            }
+          ]
+        },
+        {
+          "hash": "0xd3e37086e41a5a90",
+          "count": 417,
+          "framesPresent": 417,
+          "meanCountPerFrame": 1,
+          "totalMs": 3140.237739,
+          "meanMsPerFrame": 7.530546,
+          "meanMsPerDispatch": 7.530546,
+          "minDispatchMs": 7.372666,
+          "maxDispatchMs": 8.383084,
+          "eventKinds": {
+            "compute": 417
+          },
+          "groupDimensions": [
+            {
+              "eventKind": "compute",
+              "known": true,
+              "groups": [
+                256,
+                128,
+                1
+              ],
+              "reportedIndirectSize": null,
+              "count": 417,
+              "framesPresent": 417,
+              "meanMsPerFrame": 7.530546,
+              "meanMsPerDispatch": 7.530546
+            }
+          ]
+        },
+        {
+          "hash": "0xb58aed6d925a0de8",
+          "count": 417,
+          "framesPresent": 417,
+          "meanCountPerFrame": 1,
+          "totalMs": 2124.427584,
+          "meanMsPerFrame": 5.094551,
+          "meanMsPerDispatch": 5.094551,
+          "minDispatchMs": 4.568417,
+          "maxDispatchMs": 5.476583,
+          "eventKinds": {
+            "compute": 417
+          },
+          "groupDimensions": [
+            {
+              "eventKind": "compute",
+              "known": true,
+              "groups": [
+                256,
+                128,
+                1
+              ],
+              "reportedIndirectSize": null,
+              "count": 417,
+              "framesPresent": 417,
+              "meanMsPerFrame": 5.094551,
+              "meanMsPerDispatch": 5.094551
+            }
+          ]
+        }
+      ],
+      "pairingErrors": 0
+    },
+    {
+      "tag": "buffer-return",
+      "completeFrameCount": 419,
+      "fullFrameMs": {
+        "mean": 46.170222,
+        "min": 43.792333,
+        "max": 48.785083,
+        "total": 19345.323089
+      },
+      "top3": [
+        {
+          "hash": "0x79a7036abfc4b22",
+          "count": 419,
+          "framesPresent": 419,
+          "meanCountPerFrame": 1,
+          "totalMs": 3352.866754,
+          "meanMsPerFrame": 8.002069,
+          "meanMsPerDispatch": 8.002069,
+          "minDispatchMs": 7.5825,
+          "maxDispatchMs": 8.266083,
+          "eventKinds": {
+            "compute": 419
+          },
+          "groupDimensions": [
+            {
+              "eventKind": "compute",
+              "known": true,
+              "groups": [
+                256,
+                128,
+                1
+              ],
+              "reportedIndirectSize": null,
+              "count": 419,
+              "framesPresent": 419,
+              "meanMsPerFrame": 8.002069,
+              "meanMsPerDispatch": 8.002069
+            }
+          ]
+        },
+        {
+          "hash": "0x580ca7030f598e7",
+          "count": 419,
+          "framesPresent": 419,
+          "meanCountPerFrame": 1,
+          "totalMs": 2754.893093,
+          "meanMsPerFrame": 6.574924,
+          "meanMsPerDispatch": 6.574924,
+          "minDispatchMs": 4.783,
+          "maxDispatchMs": 7.714833,
+          "eventKinds": {
+            "compute_indirect": 419
+          },
+          "groupDimensions": [
+            {
+              "eventKind": "compute_indirect",
+              "known": false,
+              "groups": null,
+              "reportedIndirectSize": "0x0x0",
+              "count": 419,
+              "framesPresent": 419,
+              "meanMsPerFrame": 6.574924,
+              "meanMsPerDispatch": 6.574924
+            }
+          ]
+        },
+        {
+          "hash": "0x859e6b0efc6439f6",
+          "count": 419,
+          "framesPresent": 419,
+          "meanCountPerFrame": 1,
+          "totalMs": 2067.195738,
+          "meanMsPerFrame": 4.933641,
+          "meanMsPerDispatch": 4.933641,
+          "minDispatchMs": 4.40925,
+          "maxDispatchMs": 5.519334,
+          "eventKinds": {
+            "compute": 419
+          },
+          "groupDimensions": [
+            {
+              "eventKind": "compute",
+              "known": true,
+              "groups": [
+                256,
+                128,
+                1
+              ],
+              "reportedIndirectSize": null,
+              "count": 419,
+              "framesPresent": 419,
+              "meanMsPerFrame": 4.933641,
+              "meanMsPerDispatch": 4.933641
+            }
+          ]
+        }
+      ],
+      "pairingErrors": 0
+    }
+  ],
+  "limitations": [
+    "Ordinary engine rows are approximately one-second aggregates, not per-frame percentiles.",
+    "GPU traces are intrusive diagnostics, not ordinary FPS.",
+    "Live online scene, player activity varies.",
+    "No shader payloads or account information included."
+  ]
+}

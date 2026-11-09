@@ -11,7 +11,7 @@ Frozen candidate DLL SHA-256:
 - `d3d11.dll`: `87fa406ac066ca3033198a4e0e46103a5ae86967e6dfaa9f86e4042dba8e7638`
 - `dxgi.dll`: `a7f9bb3511d7e3947f5281bdd2141c8d9f162370f77ec383e4fc4bbcb47849a9`
 
-A quiet 3.1 XWayland sample averaged 19.2 FPS; 2.7 samples averaged 20.0 and 20.3 FPS. This was **not a complete matched A/B/A**, and the second 2.7 sample may overlap an expired screen-awake inhibitor. A causal 2.7 advantage is not established. The quality-setting gains below must not be attributed to changing DXVK versions.
+A quiet 3.1 XWayland sample averaged 19.2 FPS; 2.7 samples averaged 20.0 and 20.3 FPS. This was **not a complete matched A/B/A**, and the second 2.7 sample may overlap an expired screen-awake inhibitor. Those early samples did not establish a causal 2.7 advantage. A later [ordinary 3.1 → 2.7 → 3.1 return comparison](FOLLOWUP-2026-11-09.md#ordinary-dxvk-31--27--31) supports keeping 2.7 (20.72 → 22.39 → 20.64 FPS), with the documented live-scene/background limitations. The quality-setting gains below must not be attributed to changing DXVK versions.
 
 ## Where the time goes
 
