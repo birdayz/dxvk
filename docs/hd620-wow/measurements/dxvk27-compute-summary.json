@@ -1,0 +1,3152 @@
+[
+  {
+    "label": "world-utrace-summary",
+    "completeFrameCount": 104,
+    "fullFrameMs": {
+      "mean": 44.775391,
+      "min": 41.938084,
+      "max": 46.479667,
+      "total": 4656.640669
+    },
+    "shaderStats": [
+      {
+        "hash": "0x79a7036abfc4b22",
+        "count": 104,
+        "framesPresent": 104,
+        "meanCountPerFrame": 1,
+        "totalMs": 817.378834,
+        "meanMsPerFrame": 7.859412,
+        "meanMsPerDispatch": 7.859412,
+        "minDispatchMs": 7.696,
+        "maxDispatchMs": 8.009833,
+        "eventKinds": {
+          "compute": 104
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              256,
+              128,
+              1
+            ],
+            "reportedIndirectSize": null,
+            "count": 104,
+            "framesPresent": 104,
+            "meanMsPerFrame": 7.859412,
+            "meanMsPerDispatch": 7.859412
+          }
+        ]
+      },
+      {
+        "hash": "0x580ca7030f598e7",
+        "count": 104,
+        "framesPresent": 104,
+        "meanCountPerFrame": 1,
+        "totalMs": 751.007424,
+        "meanMsPerFrame": 7.221225,
+        "meanMsPerDispatch": 7.221225,
+        "minDispatchMs": 4.78125,
+        "maxDispatchMs": 8.408,
+        "eventKinds": {
+          "compute_indirect": 104
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute_indirect",
+            "known": false,
+            "groups": null,
+            "reportedIndirectSize": "0x0x0",
+            "count": 104,
+            "framesPresent": 104,
+            "meanMsPerFrame": 7.221225,
+            "meanMsPerDispatch": 7.221225
+          }
+        ]
+      },
+      {
+        "hash": "0x859e6b0efc6439f6",
+        "count": 104,
+        "framesPresent": 104,
+        "meanCountPerFrame": 1,
+        "totalMs": 497.07133,
+        "meanMsPerFrame": 4.779532,
+        "meanMsPerDispatch": 4.779532,
+        "minDispatchMs": 4.3305,
+        "maxDispatchMs": 5.261167,
+        "eventKinds": {
+          "compute": 104
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              256,
+              128,
+              1
+            ],
+            "reportedIndirectSize": null,
+            "count": 104,
+            "framesPresent": 104,
+            "meanMsPerFrame": 4.779532,
+            "meanMsPerDispatch": 4.779532
+          }
+        ]
+      },
+      {
+        "hash": "0x67fee361ac258949",
+        "count": 208,
+        "framesPresent": 104,
+        "meanCountPerFrame": 2,
+        "totalMs": 272.585165,
+        "meanMsPerFrame": 2.621011,
+        "meanMsPerDispatch": 1.310506,
+        "minDispatchMs": 1.117333,
+        "maxDispatchMs": 1.51025,
+        "eventKinds": {
+          "compute": 208
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              1,
+              256,
+              4
+            ],
+            "reportedIndirectSize": null,
+            "count": 208,
+            "framesPresent": 104,
+            "meanMsPerFrame": 2.621011,
+            "meanMsPerDispatch": 1.310506
+          }
+        ]
+      },
+      {
+        "hash": "0x7d0a8d69f0923615",
+        "count": 104,
+        "framesPresent": 104,
+        "meanCountPerFrame": 1,
+        "totalMs": 166.812252,
+        "meanMsPerFrame": 1.603964,
+        "meanMsPerDispatch": 1.603964,
+        "minDispatchMs": 1.54875,
+        "maxDispatchMs": 1.685334,
+        "eventKinds": {
+          "compute": 104
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              107,
+              60,
+              1
+            ],
+            "reportedIndirectSize": null,
+            "count": 104,
+            "framesPresent": 104,
+            "meanMsPerFrame": 1.603964,
+            "meanMsPerDispatch": 1.603964
+          }
+        ]
+      },
+      {
+        "hash": "0x21ee37b6995f4597",
+        "count": 104,
+        "framesPresent": 104,
+        "meanCountPerFrame": 1,
+        "totalMs": 119.452913,
+        "meanMsPerFrame": 1.148586,
+        "meanMsPerDispatch": 1.148586,
+        "minDispatchMs": 1.093833,
+        "maxDispatchMs": 1.210333,
+        "eventKinds": {
+          "compute": 104
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              16,
+              16,
+              32
+            ],
+            "reportedIndirectSize": null,
+            "count": 104,
+            "framesPresent": 104,
+            "meanMsPerFrame": 1.148586,
+            "meanMsPerDispatch": 1.148586
+          }
+        ]
+      },
+      {
+        "hash": "0x20c6f01908e83ed5",
+        "count": 208,
+        "framesPresent": 104,
+        "meanCountPerFrame": 2,
+        "totalMs": 57.481337,
+        "meanMsPerFrame": 0.552705,
+        "meanMsPerDispatch": 0.276353,
+        "minDispatchMs": 0.01,
+        "maxDispatchMs": 0.563584,
+        "eventKinds": {
+          "compute": 208
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              8,
+              4,
+              16
+            ],
+            "reportedIndirectSize": null,
+            "count": 208,
+            "framesPresent": 104,
+            "meanMsPerFrame": 0.552705,
+            "meanMsPerDispatch": 0.276353
+          }
+        ]
+      },
+      {
+        "hash": "0x89a9973430c58a25",
+        "count": 104,
+        "framesPresent": 104,
+        "meanCountPerFrame": 1,
+        "totalMs": 53.631327,
+        "meanMsPerFrame": 0.515686,
+        "meanMsPerDispatch": 0.515686,
+        "minDispatchMs": 0.482166,
+        "maxDispatchMs": 0.5755,
+        "eventKinds": {
+          "compute": 104
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              54,
+              30,
+              1
+            ],
+            "reportedIndirectSize": null,
+            "count": 104,
+            "framesPresent": 104,
+            "meanMsPerFrame": 0.515686,
+            "meanMsPerDispatch": 0.515686
+          }
+        ]
+      },
+      {
+        "hash": "0xe9049ae1af45c8d0",
+        "count": 104,
+        "framesPresent": 104,
+        "meanCountPerFrame": 1,
+        "totalMs": 49.209748,
+        "meanMsPerFrame": 0.473171,
+        "meanMsPerDispatch": 0.473171,
+        "minDispatchMs": 0.389167,
+        "maxDispatchMs": 0.5835,
+        "eventKinds": {
+          "compute": 104
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              32,
+              32,
+              4
+            ],
+            "reportedIndirectSize": null,
+            "count": 104,
+            "framesPresent": 104,
+            "meanMsPerFrame": 0.473171,
+            "meanMsPerDispatch": 0.473171
+          }
+        ]
+      },
+      {
+        "hash": "0xf5a7fce76a4bf918",
+        "count": 104,
+        "framesPresent": 104,
+        "meanCountPerFrame": 1,
+        "totalMs": 33.603253,
+        "meanMsPerFrame": 0.323108,
+        "meanMsPerDispatch": 0.323108,
+        "minDispatchMs": 0.270084,
+        "maxDispatchMs": 0.384084,
+        "eventKinds": {
+          "compute": 104
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              32,
+              32,
+              4
+            ],
+            "reportedIndirectSize": null,
+            "count": 104,
+            "framesPresent": 104,
+            "meanMsPerFrame": 0.323108,
+            "meanMsPerDispatch": 0.323108
+          }
+        ]
+      },
+      {
+        "hash": "0x3f9eb268f1cf745d",
+        "count": 208,
+        "framesPresent": 104,
+        "meanCountPerFrame": 2,
+        "totalMs": 23.491327,
+        "meanMsPerFrame": 0.225878,
+        "meanMsPerDispatch": 0.112939,
+        "minDispatchMs": 0.008584,
+        "maxDispatchMs": 0.245166,
+        "eventKinds": {
+          "compute": 208
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              16,
+              16,
+              4
+            ],
+            "reportedIndirectSize": null,
+            "count": 104,
+            "framesPresent": 104,
+            "meanMsPerFrame": 0.216491,
+            "meanMsPerDispatch": 0.216491
+          },
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              1,
+              1,
+              4
+            ],
+            "reportedIndirectSize": null,
+            "count": 104,
+            "framesPresent": 104,
+            "meanMsPerFrame": 0.009387,
+            "meanMsPerDispatch": 0.009387
+          }
+        ]
+      },
+      {
+        "hash": "0xe30091718f7e0a57",
+        "count": 44,
+        "framesPresent": 44,
+        "meanCountPerFrame": 0.423077,
+        "totalMs": 20.659331,
+        "meanMsPerFrame": 0.198647,
+        "meanMsPerDispatch": 0.46953,
+        "minDispatchMs": 0.446584,
+        "maxDispatchMs": 0.510333,
+        "eventKinds": {
+          "compute": 44
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              32,
+              32,
+              4
+            ],
+            "reportedIndirectSize": null,
+            "count": 44,
+            "framesPresent": 44,
+            "meanMsPerFrame": 0.198647,
+            "meanMsPerDispatch": 0.46953
+          }
+        ]
+      },
+      {
+        "hash": "0xbbea6fdb69c64db8",
+        "count": 104,
+        "framesPresent": 104,
+        "meanCountPerFrame": 1,
+        "totalMs": 11.60467,
+        "meanMsPerFrame": 0.111583,
+        "meanMsPerDispatch": 0.111583,
+        "minDispatchMs": 0.107417,
+        "maxDispatchMs": 0.131167,
+        "eventKinds": {
+          "compute": 104
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              4,
+              2,
+              1
+            ],
+            "reportedIndirectSize": null,
+            "count": 104,
+            "framesPresent": 104,
+            "meanMsPerFrame": 0.111583,
+            "meanMsPerDispatch": 0.111583
+          }
+        ]
+      },
+      {
+        "hash": "0x58e9835e31fbec6e",
+        "count": 624,
+        "framesPresent": 104,
+        "meanCountPerFrame": 6,
+        "totalMs": 11.50757,
+        "meanMsPerFrame": 0.11065,
+        "meanMsPerDispatch": 0.018442,
+        "minDispatchMs": 0.006416,
+        "maxDispatchMs": 0.072667,
+        "eventKinds": {
+          "compute": 624
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              6,
+              6,
+              6
+            ],
+            "reportedIndirectSize": null,
+            "count": 104,
+            "framesPresent": 104,
+            "meanMsPerFrame": 0.056975,
+            "meanMsPerDispatch": 0.056975
+          },
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              3,
+              3,
+              6
+            ],
+            "reportedIndirectSize": null,
+            "count": 104,
+            "framesPresent": 104,
+            "meanMsPerFrame": 0.022725,
+            "meanMsPerDispatch": 0.022725
+          },
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              2,
+              2,
+              6
+            ],
+            "reportedIndirectSize": null,
+            "count": 104,
+            "framesPresent": 104,
+            "meanMsPerFrame": 0.009071,
+            "meanMsPerDispatch": 0.009071
+          },
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              1,
+              1,
+              6
+            ],
+            "reportedIndirectSize": null,
+            "count": 312,
+            "framesPresent": 104,
+            "meanMsPerFrame": 0.021878,
+            "meanMsPerDispatch": 0.007293
+          }
+        ]
+      },
+      {
+        "hash": "0x589ee41905ff5ed2",
+        "count": 104,
+        "framesPresent": 104,
+        "meanCountPerFrame": 1,
+        "totalMs": 9.5405,
+        "meanMsPerFrame": 0.091736,
+        "meanMsPerDispatch": 0.091736,
+        "minDispatchMs": 0.0855,
+        "maxDispatchMs": 0.107167,
+        "eventKinds": {
+          "compute": 104
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              2,
+              2,
+              24
+            ],
+            "reportedIndirectSize": null,
+            "count": 104,
+            "framesPresent": 104,
+            "meanMsPerFrame": 0.091736,
+            "meanMsPerDispatch": 0.091736
+          }
+        ]
+      },
+      {
+        "hash": "0x7fb288e8342a1654",
+        "count": 104,
+        "framesPresent": 104,
+        "meanCountPerFrame": 1,
+        "totalMs": 7.878749,
+        "meanMsPerFrame": 0.075757,
+        "meanMsPerDispatch": 0.075757,
+        "minDispatchMs": 0.070917,
+        "maxDispatchMs": 0.103334,
+        "eventKinds": {
+          "compute": 104
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              4,
+              2,
+              64
+            ],
+            "reportedIndirectSize": null,
+            "count": 104,
+            "framesPresent": 104,
+            "meanMsPerFrame": 0.075757,
+            "meanMsPerDispatch": 0.075757
+          }
+        ]
+      },
+      {
+        "hash": "0xccbdee0a8db99d2",
+        "count": 104,
+        "framesPresent": 104,
+        "meanCountPerFrame": 1,
+        "totalMs": 7.111996,
+        "meanMsPerFrame": 0.068385,
+        "meanMsPerDispatch": 0.068385,
+        "minDispatchMs": 0.065166,
+        "maxDispatchMs": 0.082166,
+        "eventKinds": {
+          "compute": 104
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              4,
+              2,
+              64
+            ],
+            "reportedIndirectSize": null,
+            "count": 104,
+            "framesPresent": 104,
+            "meanMsPerFrame": 0.068385,
+            "meanMsPerDispatch": 0.068385
+          }
+        ]
+      },
+      {
+        "hash": "0x88755165cbb69e62",
+        "count": 104,
+        "framesPresent": 104,
+        "meanCountPerFrame": 1,
+        "totalMs": 4.605667,
+        "meanMsPerFrame": 0.044285,
+        "meanMsPerDispatch": 0.044285,
+        "minDispatchMs": 0.04,
+        "maxDispatchMs": 0.057084,
+        "eventKinds": {
+          "compute": 104
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              12,
+              12,
+              6
+            ],
+            "reportedIndirectSize": null,
+            "count": 104,
+            "framesPresent": 104,
+            "meanMsPerFrame": 0.044285,
+            "meanMsPerDispatch": 0.044285
+          }
+        ]
+      }
+    ],
+    "eventStats": [
+      {
+        "kind": "compute",
+        "count": 2540,
+        "totalMs": 2163.625969,
+        "meanMsPerFrame": 20.804096
+      },
+      {
+        "kind": "render_pass",
+        "count": 6032,
+        "totalMs": 1516.093431,
+        "meanMsPerFrame": 14.577821
+      },
+      {
+        "kind": "compute_indirect",
+        "count": 104,
+        "totalMs": 751.007424,
+        "meanMsPerFrame": 7.221225
+      },
+      {
+        "kind": "blorp",
+        "count": 15094,
+        "totalMs": 385.734066,
+        "meanMsPerFrame": 3.708981
+      }
+    ]
+  },
+  {
+    "label": "cvars-baseline",
+    "completeFrameCount": 104,
+    "fullFrameMs": {
+      "mean": 45.162672,
+      "min": 43.219667,
+      "max": 46.879167,
+      "total": 4696.917917
+    },
+    "shaderStats": [
+      {
+        "hash": "0x79a7036abfc4b22",
+        "count": 104,
+        "framesPresent": 104,
+        "meanCountPerFrame": 1,
+        "totalMs": 820.328495,
+        "meanMsPerFrame": 7.887774,
+        "meanMsPerDispatch": 7.887774,
+        "minDispatchMs": 7.767083,
+        "maxDispatchMs": 8.317167,
+        "eventKinds": {
+          "compute": 104
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              256,
+              128,
+              1
+            ],
+            "reportedIndirectSize": null,
+            "count": 104,
+            "framesPresent": 104,
+            "meanMsPerFrame": 7.887774,
+            "meanMsPerDispatch": 7.887774
+          }
+        ]
+      },
+      {
+        "hash": "0x580ca7030f598e7",
+        "count": 104,
+        "framesPresent": 104,
+        "meanCountPerFrame": 1,
+        "totalMs": 731.706832,
+        "meanMsPerFrame": 7.035643,
+        "meanMsPerDispatch": 7.035643,
+        "minDispatchMs": 4.91375,
+        "maxDispatchMs": 8.044167,
+        "eventKinds": {
+          "compute_indirect": 104
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute_indirect",
+            "known": false,
+            "groups": null,
+            "reportedIndirectSize": "0x0x0",
+            "count": 104,
+            "framesPresent": 104,
+            "meanMsPerFrame": 7.035643,
+            "meanMsPerDispatch": 7.035643
+          }
+        ]
+      },
+      {
+        "hash": "0x859e6b0efc6439f6",
+        "count": 104,
+        "framesPresent": 104,
+        "meanCountPerFrame": 1,
+        "totalMs": 504.279009,
+        "meanMsPerFrame": 4.848837,
+        "meanMsPerDispatch": 4.848837,
+        "minDispatchMs": 4.5205,
+        "maxDispatchMs": 5.199583,
+        "eventKinds": {
+          "compute": 104
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              256,
+              128,
+              1
+            ],
+            "reportedIndirectSize": null,
+            "count": 104,
+            "framesPresent": 104,
+            "meanMsPerFrame": 4.848837,
+            "meanMsPerDispatch": 4.848837
+          }
+        ]
+      },
+      {
+        "hash": "0x67fee361ac258949",
+        "count": 208,
+        "framesPresent": 104,
+        "meanCountPerFrame": 2,
+        "totalMs": 275.362753,
+        "meanMsPerFrame": 2.647719,
+        "meanMsPerDispatch": 1.323859,
+        "minDispatchMs": 1.116584,
+        "maxDispatchMs": 1.543,
+        "eventKinds": {
+          "compute": 208
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              1,
+              256,
+              4
+            ],
+            "reportedIndirectSize": null,
+            "count": 208,
+            "framesPresent": 104,
+            "meanMsPerFrame": 2.647719,
+            "meanMsPerDispatch": 1.323859
+          }
+        ]
+      },
+      {
+        "hash": "0x7d0a8d69f0923615",
+        "count": 104,
+        "framesPresent": 104,
+        "meanCountPerFrame": 1,
+        "totalMs": 168.334338,
+        "meanMsPerFrame": 1.618599,
+        "meanMsPerDispatch": 1.618599,
+        "minDispatchMs": 1.542917,
+        "maxDispatchMs": 1.758167,
+        "eventKinds": {
+          "compute": 104
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              107,
+              60,
+              1
+            ],
+            "reportedIndirectSize": null,
+            "count": 104,
+            "framesPresent": 104,
+            "meanMsPerFrame": 1.618599,
+            "meanMsPerDispatch": 1.618599
+          }
+        ]
+      },
+      {
+        "hash": "0x21ee37b6995f4597",
+        "count": 104,
+        "framesPresent": 104,
+        "meanCountPerFrame": 1,
+        "totalMs": 119.912251,
+        "meanMsPerFrame": 1.153002,
+        "meanMsPerDispatch": 1.153002,
+        "minDispatchMs": 1.087083,
+        "maxDispatchMs": 1.23475,
+        "eventKinds": {
+          "compute": 104
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              16,
+              16,
+              32
+            ],
+            "reportedIndirectSize": null,
+            "count": 104,
+            "framesPresent": 104,
+            "meanMsPerFrame": 1.153002,
+            "meanMsPerDispatch": 1.153002
+          }
+        ]
+      },
+      {
+        "hash": "0x20c6f01908e83ed5",
+        "count": 208,
+        "framesPresent": 104,
+        "meanCountPerFrame": 2,
+        "totalMs": 57.123329,
+        "meanMsPerFrame": 0.549263,
+        "meanMsPerDispatch": 0.274631,
+        "minDispatchMs": 0.010083,
+        "maxDispatchMs": 0.57625,
+        "eventKinds": {
+          "compute": 208
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              8,
+              4,
+              16
+            ],
+            "reportedIndirectSize": null,
+            "count": 208,
+            "framesPresent": 104,
+            "meanMsPerFrame": 0.549263,
+            "meanMsPerDispatch": 0.274631
+          }
+        ]
+      },
+      {
+        "hash": "0x89a9973430c58a25",
+        "count": 104,
+        "framesPresent": 104,
+        "meanCountPerFrame": 1,
+        "totalMs": 54.362,
+        "meanMsPerFrame": 0.522712,
+        "meanMsPerDispatch": 0.522712,
+        "minDispatchMs": 0.49475,
+        "maxDispatchMs": 0.579833,
+        "eventKinds": {
+          "compute": 104
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              54,
+              30,
+              1
+            ],
+            "reportedIndirectSize": null,
+            "count": 104,
+            "framesPresent": 104,
+            "meanMsPerFrame": 0.522712,
+            "meanMsPerDispatch": 0.522712
+          }
+        ]
+      },
+      {
+        "hash": "0xe9049ae1af45c8d0",
+        "count": 104,
+        "framesPresent": 104,
+        "meanCountPerFrame": 1,
+        "totalMs": 50.227664,
+        "meanMsPerFrame": 0.482958,
+        "meanMsPerDispatch": 0.482958,
+        "minDispatchMs": 0.387583,
+        "maxDispatchMs": 0.570917,
+        "eventKinds": {
+          "compute": 104
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              32,
+              32,
+              4
+            ],
+            "reportedIndirectSize": null,
+            "count": 104,
+            "framesPresent": 104,
+            "meanMsPerFrame": 0.482958,
+            "meanMsPerDispatch": 0.482958
+          }
+        ]
+      },
+      {
+        "hash": "0xf5a7fce76a4bf918",
+        "count": 104,
+        "framesPresent": 104,
+        "meanCountPerFrame": 1,
+        "totalMs": 33.206248,
+        "meanMsPerFrame": 0.319291,
+        "meanMsPerDispatch": 0.319291,
+        "minDispatchMs": 0.27725,
+        "maxDispatchMs": 0.395583,
+        "eventKinds": {
+          "compute": 104
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              32,
+              32,
+              4
+            ],
+            "reportedIndirectSize": null,
+            "count": 104,
+            "framesPresent": 104,
+            "meanMsPerFrame": 0.319291,
+            "meanMsPerDispatch": 0.319291
+          }
+        ]
+      },
+      {
+        "hash": "0xe30091718f7e0a57",
+        "count": 64,
+        "framesPresent": 64,
+        "meanCountPerFrame": 0.615385,
+        "totalMs": 30.443503,
+        "meanMsPerFrame": 0.292726,
+        "meanMsPerDispatch": 0.47568,
+        "minDispatchMs": 0.447167,
+        "maxDispatchMs": 0.524584,
+        "eventKinds": {
+          "compute": 64
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              32,
+              32,
+              4
+            ],
+            "reportedIndirectSize": null,
+            "count": 64,
+            "framesPresent": 64,
+            "meanMsPerFrame": 0.292726,
+            "meanMsPerDispatch": 0.47568
+          }
+        ]
+      },
+      {
+        "hash": "0x3f9eb268f1cf745d",
+        "count": 208,
+        "framesPresent": 104,
+        "meanCountPerFrame": 2,
+        "totalMs": 23.761502,
+        "meanMsPerFrame": 0.228476,
+        "meanMsPerDispatch": 0.114238,
+        "minDispatchMs": 0.0085,
+        "maxDispatchMs": 0.244416,
+        "eventKinds": {
+          "compute": 208
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              16,
+              16,
+              4
+            ],
+            "reportedIndirectSize": null,
+            "count": 104,
+            "framesPresent": 104,
+            "meanMsPerFrame": 0.218678,
+            "meanMsPerDispatch": 0.218678
+          },
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              1,
+              1,
+              4
+            ],
+            "reportedIndirectSize": null,
+            "count": 104,
+            "framesPresent": 104,
+            "meanMsPerFrame": 0.009798,
+            "meanMsPerDispatch": 0.009798
+          }
+        ]
+      },
+      {
+        "hash": "0x58e9835e31fbec6e",
+        "count": 624,
+        "framesPresent": 104,
+        "meanCountPerFrame": 6,
+        "totalMs": 11.694312,
+        "meanMsPerFrame": 0.112445,
+        "meanMsPerDispatch": 0.018741,
+        "minDispatchMs": 0.006333,
+        "maxDispatchMs": 0.07625,
+        "eventKinds": {
+          "compute": 624
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              6,
+              6,
+              6
+            ],
+            "reportedIndirectSize": null,
+            "count": 104,
+            "framesPresent": 104,
+            "meanMsPerFrame": 0.058004,
+            "meanMsPerDispatch": 0.058004
+          },
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              3,
+              3,
+              6
+            ],
+            "reportedIndirectSize": null,
+            "count": 104,
+            "framesPresent": 104,
+            "meanMsPerFrame": 0.023187,
+            "meanMsPerDispatch": 0.023187
+          },
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              2,
+              2,
+              6
+            ],
+            "reportedIndirectSize": null,
+            "count": 104,
+            "framesPresent": 104,
+            "meanMsPerFrame": 0.009151,
+            "meanMsPerDispatch": 0.009151
+          },
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              1,
+              1,
+              6
+            ],
+            "reportedIndirectSize": null,
+            "count": 312,
+            "framesPresent": 104,
+            "meanMsPerFrame": 0.022102,
+            "meanMsPerDispatch": 0.007367
+          }
+        ]
+      },
+      {
+        "hash": "0x589ee41905ff5ed2",
+        "count": 104,
+        "framesPresent": 104,
+        "meanCountPerFrame": 1,
+        "totalMs": 10.490251,
+        "meanMsPerFrame": 0.100868,
+        "meanMsPerDispatch": 0.100868,
+        "minDispatchMs": 0.095167,
+        "maxDispatchMs": 0.117583,
+        "eventKinds": {
+          "compute": 104
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              2,
+              2,
+              24
+            ],
+            "reportedIndirectSize": null,
+            "count": 104,
+            "framesPresent": 104,
+            "meanMsPerFrame": 0.100868,
+            "meanMsPerDispatch": 0.100868
+          }
+        ]
+      },
+      {
+        "hash": "0x7fb288e8342a1654",
+        "count": 104,
+        "framesPresent": 104,
+        "meanCountPerFrame": 1,
+        "totalMs": 7.855338,
+        "meanMsPerFrame": 0.075532,
+        "meanMsPerDispatch": 0.075532,
+        "minDispatchMs": 0.070666,
+        "maxDispatchMs": 0.091417,
+        "eventKinds": {
+          "compute": 104
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              4,
+              2,
+              64
+            ],
+            "reportedIndirectSize": null,
+            "count": 104,
+            "framesPresent": 104,
+            "meanMsPerFrame": 0.075532,
+            "meanMsPerDispatch": 0.075532
+          }
+        ]
+      },
+      {
+        "hash": "0xbbea6fdb69c64db8",
+        "count": 67,
+        "framesPresent": 67,
+        "meanCountPerFrame": 0.644231,
+        "totalMs": 7.568666,
+        "meanMsPerFrame": 0.072776,
+        "meanMsPerDispatch": 0.112965,
+        "minDispatchMs": 0.105917,
+        "maxDispatchMs": 0.132083,
+        "eventKinds": {
+          "compute": 67
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              4,
+              2,
+              1
+            ],
+            "reportedIndirectSize": null,
+            "count": 67,
+            "framesPresent": 67,
+            "meanMsPerFrame": 0.072776,
+            "meanMsPerDispatch": 0.112965
+          }
+        ]
+      },
+      {
+        "hash": "0xccbdee0a8db99d2",
+        "count": 104,
+        "framesPresent": 104,
+        "meanCountPerFrame": 1,
+        "totalMs": 7.182417,
+        "meanMsPerFrame": 0.069062,
+        "meanMsPerDispatch": 0.069062,
+        "minDispatchMs": 0.065,
+        "maxDispatchMs": 0.096917,
+        "eventKinds": {
+          "compute": 104
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              4,
+              2,
+              64
+            ],
+            "reportedIndirectSize": null,
+            "count": 104,
+            "framesPresent": 104,
+            "meanMsPerFrame": 0.069062,
+            "meanMsPerDispatch": 0.069062
+          }
+        ]
+      },
+      {
+        "hash": "0x88755165cbb69e62",
+        "count": 104,
+        "framesPresent": 104,
+        "meanCountPerFrame": 1,
+        "totalMs": 4.709083,
+        "meanMsPerFrame": 0.04528,
+        "meanMsPerDispatch": 0.04528,
+        "minDispatchMs": 0.040917,
+        "maxDispatchMs": 0.061333,
+        "eventKinds": {
+          "compute": 104
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              12,
+              12,
+              6
+            ],
+            "reportedIndirectSize": null,
+            "count": 104,
+            "framesPresent": 104,
+            "meanMsPerFrame": 0.04528,
+            "meanMsPerDispatch": 0.04528
+          }
+        ]
+      },
+      {
+        "hash": "0x679d02ecfdde56c4",
+        "count": 37,
+        "framesPresent": 37,
+        "meanCountPerFrame": 0.355769,
+        "totalMs": 3.052667,
+        "meanMsPerFrame": 0.029353,
+        "meanMsPerDispatch": 0.082505,
+        "minDispatchMs": 0.077333,
+        "maxDispatchMs": 0.096834,
+        "eventKinds": {
+          "compute": 37
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              4,
+              2,
+              1
+            ],
+            "reportedIndirectSize": null,
+            "count": 37,
+            "framesPresent": 37,
+            "meanMsPerFrame": 0.029353,
+            "meanMsPerDispatch": 0.082505
+          }
+        ]
+      },
+      {
+        "hash": "0x3aa72c56510c16be",
+        "count": 37,
+        "framesPresent": 37,
+        "meanCountPerFrame": 0.355769,
+        "totalMs": 1.486418,
+        "meanMsPerFrame": 0.014292,
+        "meanMsPerDispatch": 0.040173,
+        "minDispatchMs": 0.037083,
+        "maxDispatchMs": 0.053917,
+        "eventKinds": {
+          "compute": 37
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              8,
+              4,
+              16
+            ],
+            "reportedIndirectSize": null,
+            "count": 37,
+            "framesPresent": 37,
+            "meanMsPerFrame": 0.014292,
+            "meanMsPerDispatch": 0.040173
+          }
+        ]
+      }
+    ],
+    "eventStats": [
+      {
+        "kind": "compute",
+        "count": 2597,
+        "totalMs": 2191.380244,
+        "meanMsPerFrame": 21.070964
+      },
+      {
+        "kind": "render_pass",
+        "count": 6032,
+        "totalMs": 1548.958893,
+        "meanMsPerFrame": 14.893836
+      },
+      {
+        "kind": "compute_indirect",
+        "count": 104,
+        "totalMs": 731.706832,
+        "meanMsPerFrame": 7.035643
+      },
+      {
+        "kind": "blorp",
+        "count": 15131,
+        "totalMs": 384.429941,
+        "meanMsPerFrame": 3.696442
+      }
+    ]
+  },
+  {
+    "label": "cvars-cluster-off",
+    "completeFrameCount": 106,
+    "fullFrameMs": {
+      "mean": 44.634559,
+      "min": 42.10875,
+      "max": 46.771916,
+      "total": 4731.263245
+    },
+    "shaderStats": [
+      {
+        "hash": "0x79a7036abfc4b22",
+        "count": 106,
+        "framesPresent": 106,
+        "meanCountPerFrame": 1,
+        "totalMs": 835.899169,
+        "meanMsPerFrame": 7.885841,
+        "meanMsPerDispatch": 7.885841,
+        "minDispatchMs": 7.592917,
+        "maxDispatchMs": 8.129166,
+        "eventKinds": {
+          "compute": 106
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              256,
+              128,
+              1
+            ],
+            "reportedIndirectSize": null,
+            "count": 106,
+            "framesPresent": 106,
+            "meanMsPerFrame": 7.885841,
+            "meanMsPerDispatch": 7.885841
+          }
+        ]
+      },
+      {
+        "hash": "0x580ca7030f598e7",
+        "count": 106,
+        "framesPresent": 106,
+        "meanCountPerFrame": 1,
+        "totalMs": 732.148663,
+        "meanMsPerFrame": 6.907063,
+        "meanMsPerDispatch": 6.907063,
+        "minDispatchMs": 4.822583,
+        "maxDispatchMs": 8.021083,
+        "eventKinds": {
+          "compute_indirect": 106
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute_indirect",
+            "known": false,
+            "groups": null,
+            "reportedIndirectSize": "0x0x0",
+            "count": 106,
+            "framesPresent": 106,
+            "meanMsPerFrame": 6.907063,
+            "meanMsPerDispatch": 6.907063
+          }
+        ]
+      },
+      {
+        "hash": "0x859e6b0efc6439f6",
+        "count": 106,
+        "framesPresent": 106,
+        "meanCountPerFrame": 1,
+        "totalMs": 516.825086,
+        "meanMsPerFrame": 4.875708,
+        "meanMsPerDispatch": 4.875708,
+        "minDispatchMs": 4.381917,
+        "maxDispatchMs": 5.256833,
+        "eventKinds": {
+          "compute": 106
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              256,
+              128,
+              1
+            ],
+            "reportedIndirectSize": null,
+            "count": 106,
+            "framesPresent": 106,
+            "meanMsPerFrame": 4.875708,
+            "meanMsPerDispatch": 4.875708
+          }
+        ]
+      },
+      {
+        "hash": "0x67fee361ac258949",
+        "count": 212,
+        "framesPresent": 106,
+        "meanCountPerFrame": 2,
+        "totalMs": 279.837258,
+        "meanMsPerFrame": 2.639974,
+        "meanMsPerDispatch": 1.319987,
+        "minDispatchMs": 1.1435,
+        "maxDispatchMs": 1.521,
+        "eventKinds": {
+          "compute": 212
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              1,
+              256,
+              4
+            ],
+            "reportedIndirectSize": null,
+            "count": 212,
+            "framesPresent": 106,
+            "meanMsPerFrame": 2.639974,
+            "meanMsPerDispatch": 1.319987
+          }
+        ]
+      },
+      {
+        "hash": "0x7d0a8d69f0923615",
+        "count": 106,
+        "framesPresent": 106,
+        "meanCountPerFrame": 1,
+        "totalMs": 171.64708,
+        "meanMsPerFrame": 1.619312,
+        "meanMsPerDispatch": 1.619312,
+        "minDispatchMs": 1.544666,
+        "maxDispatchMs": 1.7145,
+        "eventKinds": {
+          "compute": 106
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              107,
+              60,
+              1
+            ],
+            "reportedIndirectSize": null,
+            "count": 106,
+            "framesPresent": 106,
+            "meanMsPerFrame": 1.619312,
+            "meanMsPerDispatch": 1.619312
+          }
+        ]
+      },
+      {
+        "hash": "0x21ee37b6995f4597",
+        "count": 106,
+        "framesPresent": 106,
+        "meanCountPerFrame": 1,
+        "totalMs": 122.120087,
+        "meanMsPerFrame": 1.152076,
+        "meanMsPerDispatch": 1.152076,
+        "minDispatchMs": 1.093,
+        "maxDispatchMs": 1.213,
+        "eventKinds": {
+          "compute": 106
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              16,
+              16,
+              32
+            ],
+            "reportedIndirectSize": null,
+            "count": 106,
+            "framesPresent": 106,
+            "meanMsPerFrame": 1.152076,
+            "meanMsPerDispatch": 1.152076
+          }
+        ]
+      },
+      {
+        "hash": "0x20c6f01908e83ed5",
+        "count": 212,
+        "framesPresent": 106,
+        "meanCountPerFrame": 2,
+        "totalMs": 57.132577,
+        "meanMsPerFrame": 0.538987,
+        "meanMsPerDispatch": 0.269493,
+        "minDispatchMs": 0.01,
+        "maxDispatchMs": 0.55575,
+        "eventKinds": {
+          "compute": 212
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              8,
+              4,
+              16
+            ],
+            "reportedIndirectSize": null,
+            "count": 212,
+            "framesPresent": 106,
+            "meanMsPerFrame": 0.538987,
+            "meanMsPerDispatch": 0.269493
+          }
+        ]
+      },
+      {
+        "hash": "0x89a9973430c58a25",
+        "count": 106,
+        "framesPresent": 106,
+        "meanCountPerFrame": 1,
+        "totalMs": 55.150332,
+        "meanMsPerFrame": 0.520286,
+        "meanMsPerDispatch": 0.520286,
+        "minDispatchMs": 0.47575,
+        "maxDispatchMs": 0.565667,
+        "eventKinds": {
+          "compute": 106
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              54,
+              30,
+              1
+            ],
+            "reportedIndirectSize": null,
+            "count": 106,
+            "framesPresent": 106,
+            "meanMsPerFrame": 0.520286,
+            "meanMsPerDispatch": 0.520286
+          }
+        ]
+      },
+      {
+        "hash": "0xe9049ae1af45c8d0",
+        "count": 106,
+        "framesPresent": 106,
+        "meanCountPerFrame": 1,
+        "totalMs": 50.240001,
+        "meanMsPerFrame": 0.473962,
+        "meanMsPerDispatch": 0.473962,
+        "minDispatchMs": 0.386833,
+        "maxDispatchMs": 0.594666,
+        "eventKinds": {
+          "compute": 106
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              32,
+              32,
+              4
+            ],
+            "reportedIndirectSize": null,
+            "count": 106,
+            "framesPresent": 106,
+            "meanMsPerFrame": 0.473962,
+            "meanMsPerDispatch": 0.473962
+          }
+        ]
+      },
+      {
+        "hash": "0xf5a7fce76a4bf918",
+        "count": 106,
+        "framesPresent": 106,
+        "meanCountPerFrame": 1,
+        "totalMs": 33.300826,
+        "meanMsPerFrame": 0.314159,
+        "meanMsPerDispatch": 0.314159,
+        "minDispatchMs": 0.27675,
+        "maxDispatchMs": 0.389917,
+        "eventKinds": {
+          "compute": 106
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              32,
+              32,
+              4
+            ],
+            "reportedIndirectSize": null,
+            "count": 106,
+            "framesPresent": 106,
+            "meanMsPerFrame": 0.314159,
+            "meanMsPerDispatch": 0.314159
+          }
+        ]
+      },
+      {
+        "hash": "0xe30091718f7e0a57",
+        "count": 62,
+        "framesPresent": 62,
+        "meanCountPerFrame": 0.584906,
+        "totalMs": 29.181167,
+        "meanMsPerFrame": 0.275294,
+        "meanMsPerDispatch": 0.470664,
+        "minDispatchMs": 0.446917,
+        "maxDispatchMs": 0.496917,
+        "eventKinds": {
+          "compute": 62
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              32,
+              32,
+              4
+            ],
+            "reportedIndirectSize": null,
+            "count": 62,
+            "framesPresent": 62,
+            "meanMsPerFrame": 0.275294,
+            "meanMsPerDispatch": 0.470664
+          }
+        ]
+      },
+      {
+        "hash": "0x3f9eb268f1cf745d",
+        "count": 212,
+        "framesPresent": 106,
+        "meanCountPerFrame": 2,
+        "totalMs": 24.055833,
+        "meanMsPerFrame": 0.226942,
+        "meanMsPerDispatch": 0.113471,
+        "minDispatchMs": 0.008584,
+        "maxDispatchMs": 0.249417,
+        "eventKinds": {
+          "compute": 212
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              16,
+              16,
+              4
+            ],
+            "reportedIndirectSize": null,
+            "count": 106,
+            "framesPresent": 106,
+            "meanMsPerFrame": 0.217585,
+            "meanMsPerDispatch": 0.217585
+          },
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              1,
+              1,
+              4
+            ],
+            "reportedIndirectSize": null,
+            "count": 106,
+            "framesPresent": 106,
+            "meanMsPerFrame": 0.009357,
+            "meanMsPerDispatch": 0.009357
+          }
+        ]
+      },
+      {
+        "hash": "0xbbea6fdb69c64db8",
+        "count": 106,
+        "framesPresent": 106,
+        "meanCountPerFrame": 1,
+        "totalMs": 12.133083,
+        "meanMsPerFrame": 0.114463,
+        "meanMsPerDispatch": 0.114463,
+        "minDispatchMs": 0.106667,
+        "maxDispatchMs": 0.127833,
+        "eventKinds": {
+          "compute": 106
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              4,
+              2,
+              1
+            ],
+            "reportedIndirectSize": null,
+            "count": 106,
+            "framesPresent": 106,
+            "meanMsPerFrame": 0.114463,
+            "meanMsPerDispatch": 0.114463
+          }
+        ]
+      },
+      {
+        "hash": "0x58e9835e31fbec6e",
+        "count": 636,
+        "framesPresent": 106,
+        "meanCountPerFrame": 6,
+        "totalMs": 11.908327,
+        "meanMsPerFrame": 0.112343,
+        "meanMsPerDispatch": 0.018724,
+        "minDispatchMs": 0.006333,
+        "maxDispatchMs": 0.075667,
+        "eventKinds": {
+          "compute": 636
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              6,
+              6,
+              6
+            ],
+            "reportedIndirectSize": null,
+            "count": 106,
+            "framesPresent": 106,
+            "meanMsPerFrame": 0.058062,
+            "meanMsPerDispatch": 0.058062
+          },
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              3,
+              3,
+              6
+            ],
+            "reportedIndirectSize": null,
+            "count": 106,
+            "framesPresent": 106,
+            "meanMsPerFrame": 0.02312,
+            "meanMsPerDispatch": 0.02312
+          },
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              2,
+              2,
+              6
+            ],
+            "reportedIndirectSize": null,
+            "count": 106,
+            "framesPresent": 106,
+            "meanMsPerFrame": 0.009175,
+            "meanMsPerDispatch": 0.009175
+          },
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              1,
+              1,
+              6
+            ],
+            "reportedIndirectSize": null,
+            "count": 318,
+            "framesPresent": 106,
+            "meanMsPerFrame": 0.021986,
+            "meanMsPerDispatch": 0.007329
+          }
+        ]
+      },
+      {
+        "hash": "0xccbdee0a8db99d2",
+        "count": 106,
+        "framesPresent": 106,
+        "meanCountPerFrame": 1,
+        "totalMs": 7.370494,
+        "meanMsPerFrame": 0.069533,
+        "meanMsPerDispatch": 0.069533,
+        "minDispatchMs": 0.064917,
+        "maxDispatchMs": 0.083666,
+        "eventKinds": {
+          "compute": 106
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              4,
+              2,
+              64
+            ],
+            "reportedIndirectSize": null,
+            "count": 106,
+            "framesPresent": 106,
+            "meanMsPerFrame": 0.069533,
+            "meanMsPerDispatch": 0.069533
+          }
+        ]
+      },
+      {
+        "hash": "0x88755165cbb69e62",
+        "count": 106,
+        "framesPresent": 106,
+        "meanCountPerFrame": 1,
+        "totalMs": 4.778004,
+        "meanMsPerFrame": 0.045076,
+        "meanMsPerDispatch": 0.045076,
+        "minDispatchMs": 0.041667,
+        "maxDispatchMs": 0.057834,
+        "eventKinds": {
+          "compute": 106
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              12,
+              12,
+              6
+            ],
+            "reportedIndirectSize": null,
+            "count": 106,
+            "framesPresent": 106,
+            "meanMsPerFrame": 0.045076,
+            "meanMsPerDispatch": 0.045076
+          }
+        ]
+      }
+    ],
+    "eventStats": [
+      {
+        "kind": "compute",
+        "count": 2394,
+        "totalMs": 2211.579324,
+        "meanMsPerFrame": 20.863956
+      },
+      {
+        "kind": "render_pass",
+        "count": 6148,
+        "totalMs": 1560.68936,
+        "meanMsPerFrame": 14.723485
+      },
+      {
+        "kind": "compute_indirect",
+        "count": 106,
+        "totalMs": 732.148663,
+        "meanMsPerFrame": 6.907063
+      },
+      {
+        "kind": "blorp",
+        "count": 15274,
+        "totalMs": 388.322625,
+        "meanMsPerFrame": 3.663421
+      }
+    ]
+  },
+  {
+    "label": "cvars-cluster-return",
+    "completeFrameCount": 105,
+    "fullFrameMs": {
+      "mean": 45.244462,
+      "min": 42.909166,
+      "max": 46.652167,
+      "total": 4750.668497
+    },
+    "shaderStats": [
+      {
+        "hash": "0x79a7036abfc4b22",
+        "count": 105,
+        "framesPresent": 105,
+        "meanCountPerFrame": 1,
+        "totalMs": 839.291995,
+        "meanMsPerFrame": 7.993257,
+        "meanMsPerDispatch": 7.993257,
+        "minDispatchMs": 7.767333,
+        "maxDispatchMs": 8.23975,
+        "eventKinds": {
+          "compute": 105
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              256,
+              128,
+              1
+            ],
+            "reportedIndirectSize": null,
+            "count": 105,
+            "framesPresent": 105,
+            "meanMsPerFrame": 7.993257,
+            "meanMsPerDispatch": 7.993257
+          }
+        ]
+      },
+      {
+        "hash": "0x580ca7030f598e7",
+        "count": 105,
+        "framesPresent": 105,
+        "meanCountPerFrame": 1,
+        "totalMs": 753.825498,
+        "meanMsPerFrame": 7.17929,
+        "meanMsPerDispatch": 7.17929,
+        "minDispatchMs": 4.845,
+        "maxDispatchMs": 8.377583,
+        "eventKinds": {
+          "compute_indirect": 105
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute_indirect",
+            "known": false,
+            "groups": null,
+            "reportedIndirectSize": "0x0x0",
+            "count": 105,
+            "framesPresent": 105,
+            "meanMsPerFrame": 7.17929,
+            "meanMsPerDispatch": 7.17929
+          }
+        ]
+      },
+      {
+        "hash": "0x859e6b0efc6439f6",
+        "count": 105,
+        "framesPresent": 105,
+        "meanCountPerFrame": 1,
+        "totalMs": 512.925584,
+        "meanMsPerFrame": 4.885006,
+        "meanMsPerDispatch": 4.885006,
+        "minDispatchMs": 4.45575,
+        "maxDispatchMs": 5.204834,
+        "eventKinds": {
+          "compute": 105
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              256,
+              128,
+              1
+            ],
+            "reportedIndirectSize": null,
+            "count": 105,
+            "framesPresent": 105,
+            "meanMsPerFrame": 4.885006,
+            "meanMsPerDispatch": 4.885006
+          }
+        ]
+      },
+      {
+        "hash": "0x67fee361ac258949",
+        "count": 210,
+        "framesPresent": 105,
+        "meanCountPerFrame": 2,
+        "totalMs": 282.2345,
+        "meanMsPerFrame": 2.687948,
+        "meanMsPerDispatch": 1.343974,
+        "minDispatchMs": 1.166166,
+        "maxDispatchMs": 1.56,
+        "eventKinds": {
+          "compute": 210
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              1,
+              256,
+              4
+            ],
+            "reportedIndirectSize": null,
+            "count": 210,
+            "framesPresent": 105,
+            "meanMsPerFrame": 2.687948,
+            "meanMsPerDispatch": 1.343974
+          }
+        ]
+      },
+      {
+        "hash": "0x7d0a8d69f0923615",
+        "count": 105,
+        "framesPresent": 105,
+        "meanCountPerFrame": 1,
+        "totalMs": 173.591327,
+        "meanMsPerFrame": 1.653251,
+        "meanMsPerDispatch": 1.653251,
+        "minDispatchMs": 1.582083,
+        "maxDispatchMs": 1.711083,
+        "eventKinds": {
+          "compute": 105
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              107,
+              60,
+              1
+            ],
+            "reportedIndirectSize": null,
+            "count": 105,
+            "framesPresent": 105,
+            "meanMsPerFrame": 1.653251,
+            "meanMsPerDispatch": 1.653251
+          }
+        ]
+      },
+      {
+        "hash": "0x21ee37b6995f4597",
+        "count": 105,
+        "framesPresent": 105,
+        "meanCountPerFrame": 1,
+        "totalMs": 123.314917,
+        "meanMsPerFrame": 1.174428,
+        "meanMsPerDispatch": 1.174428,
+        "minDispatchMs": 1.124916,
+        "maxDispatchMs": 1.219333,
+        "eventKinds": {
+          "compute": 105
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              16,
+              16,
+              32
+            ],
+            "reportedIndirectSize": null,
+            "count": 105,
+            "framesPresent": 105,
+            "meanMsPerFrame": 1.174428,
+            "meanMsPerDispatch": 1.174428
+          }
+        ]
+      },
+      {
+        "hash": "0x20c6f01908e83ed5",
+        "count": 210,
+        "framesPresent": 105,
+        "meanCountPerFrame": 2,
+        "totalMs": 57.685336,
+        "meanMsPerFrame": 0.549384,
+        "meanMsPerDispatch": 0.274692,
+        "minDispatchMs": 0.01,
+        "maxDispatchMs": 0.565833,
+        "eventKinds": {
+          "compute": 210
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              8,
+              4,
+              16
+            ],
+            "reportedIndirectSize": null,
+            "count": 210,
+            "framesPresent": 105,
+            "meanMsPerFrame": 0.549384,
+            "meanMsPerDispatch": 0.274692
+          }
+        ]
+      },
+      {
+        "hash": "0x89a9973430c58a25",
+        "count": 105,
+        "framesPresent": 105,
+        "meanCountPerFrame": 1,
+        "totalMs": 55.426003,
+        "meanMsPerFrame": 0.527867,
+        "meanMsPerDispatch": 0.527867,
+        "minDispatchMs": 0.4965,
+        "maxDispatchMs": 0.584417,
+        "eventKinds": {
+          "compute": 105
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              54,
+              30,
+              1
+            ],
+            "reportedIndirectSize": null,
+            "count": 105,
+            "framesPresent": 105,
+            "meanMsPerFrame": 0.527867,
+            "meanMsPerDispatch": 0.527867
+          }
+        ]
+      },
+      {
+        "hash": "0xe9049ae1af45c8d0",
+        "count": 105,
+        "framesPresent": 105,
+        "meanCountPerFrame": 1,
+        "totalMs": 49.28775,
+        "meanMsPerFrame": 0.469407,
+        "meanMsPerDispatch": 0.469407,
+        "minDispatchMs": 0.394583,
+        "maxDispatchMs": 0.558583,
+        "eventKinds": {
+          "compute": 105
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              32,
+              32,
+              4
+            ],
+            "reportedIndirectSize": null,
+            "count": 105,
+            "framesPresent": 105,
+            "meanMsPerFrame": 0.469407,
+            "meanMsPerDispatch": 0.469407
+          }
+        ]
+      },
+      {
+        "hash": "0xf5a7fce76a4bf918",
+        "count": 105,
+        "framesPresent": 105,
+        "meanCountPerFrame": 1,
+        "totalMs": 33.685498,
+        "meanMsPerFrame": 0.320814,
+        "meanMsPerDispatch": 0.320814,
+        "minDispatchMs": 0.282167,
+        "maxDispatchMs": 0.384583,
+        "eventKinds": {
+          "compute": 105
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              32,
+              32,
+              4
+            ],
+            "reportedIndirectSize": null,
+            "count": 105,
+            "framesPresent": 105,
+            "meanMsPerFrame": 0.320814,
+            "meanMsPerDispatch": 0.320814
+          }
+        ]
+      },
+      {
+        "hash": "0x3f9eb268f1cf745d",
+        "count": 210,
+        "framesPresent": 105,
+        "meanCountPerFrame": 2,
+        "totalMs": 24.379335,
+        "meanMsPerFrame": 0.232184,
+        "meanMsPerDispatch": 0.116092,
+        "minDispatchMs": 0.008833,
+        "maxDispatchMs": 0.245166,
+        "eventKinds": {
+          "compute": 210
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              16,
+              16,
+              4
+            ],
+            "reportedIndirectSize": null,
+            "count": 105,
+            "framesPresent": 105,
+            "meanMsPerFrame": 0.222398,
+            "meanMsPerDispatch": 0.222398
+          },
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              1,
+              1,
+              4
+            ],
+            "reportedIndirectSize": null,
+            "count": 105,
+            "framesPresent": 105,
+            "meanMsPerFrame": 0.009786,
+            "meanMsPerDispatch": 0.009786
+          }
+        ]
+      },
+      {
+        "hash": "0xe30091718f7e0a57",
+        "count": 48,
+        "framesPresent": 48,
+        "meanCountPerFrame": 0.457143,
+        "totalMs": 23.192663,
+        "meanMsPerFrame": 0.220883,
+        "meanMsPerDispatch": 0.48318,
+        "minDispatchMs": 0.448583,
+        "maxDispatchMs": 0.510584,
+        "eventKinds": {
+          "compute": 48
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              32,
+              32,
+              4
+            ],
+            "reportedIndirectSize": null,
+            "count": 48,
+            "framesPresent": 48,
+            "meanMsPerFrame": 0.220883,
+            "meanMsPerDispatch": 0.48318
+          }
+        ]
+      },
+      {
+        "hash": "0x58e9835e31fbec6e",
+        "count": 630,
+        "framesPresent": 105,
+        "meanCountPerFrame": 6,
+        "totalMs": 11.863911,
+        "meanMsPerFrame": 0.11299,
+        "meanMsPerDispatch": 0.018832,
+        "minDispatchMs": 0.006583,
+        "maxDispatchMs": 0.069167,
+        "eventKinds": {
+          "compute": 630
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              6,
+              6,
+              6
+            ],
+            "reportedIndirectSize": null,
+            "count": 105,
+            "framesPresent": 105,
+            "meanMsPerFrame": 0.05814,
+            "meanMsPerDispatch": 0.05814
+          },
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              3,
+              3,
+              6
+            ],
+            "reportedIndirectSize": null,
+            "count": 105,
+            "framesPresent": 105,
+            "meanMsPerFrame": 0.023348,
+            "meanMsPerDispatch": 0.023348
+          },
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              2,
+              2,
+              6
+            ],
+            "reportedIndirectSize": null,
+            "count": 105,
+            "framesPresent": 105,
+            "meanMsPerFrame": 0.009311,
+            "meanMsPerDispatch": 0.009311
+          },
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              1,
+              1,
+              6
+            ],
+            "reportedIndirectSize": null,
+            "count": 315,
+            "framesPresent": 105,
+            "meanMsPerFrame": 0.02219,
+            "meanMsPerDispatch": 0.007397
+          }
+        ]
+      },
+      {
+        "hash": "0xbbea6fdb69c64db8",
+        "count": 105,
+        "framesPresent": 105,
+        "meanCountPerFrame": 1,
+        "totalMs": 11.788672,
+        "meanMsPerFrame": 0.112273,
+        "meanMsPerDispatch": 0.112273,
+        "minDispatchMs": 0.106834,
+        "maxDispatchMs": 0.126584,
+        "eventKinds": {
+          "compute": 105
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              4,
+              2,
+              1
+            ],
+            "reportedIndirectSize": null,
+            "count": 105,
+            "framesPresent": 105,
+            "meanMsPerFrame": 0.112273,
+            "meanMsPerDispatch": 0.112273
+          }
+        ]
+      },
+      {
+        "hash": "0x589ee41905ff5ed2",
+        "count": 105,
+        "framesPresent": 105,
+        "meanCountPerFrame": 1,
+        "totalMs": 9.878587,
+        "meanMsPerFrame": 0.094082,
+        "meanMsPerDispatch": 0.094082,
+        "minDispatchMs": 0.088,
+        "maxDispatchMs": 0.108333,
+        "eventKinds": {
+          "compute": 105
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              2,
+              2,
+              24
+            ],
+            "reportedIndirectSize": null,
+            "count": 105,
+            "framesPresent": 105,
+            "meanMsPerFrame": 0.094082,
+            "meanMsPerDispatch": 0.094082
+          }
+        ]
+      },
+      {
+        "hash": "0x7fb288e8342a1654",
+        "count": 105,
+        "framesPresent": 105,
+        "meanCountPerFrame": 1,
+        "totalMs": 7.996752,
+        "meanMsPerFrame": 0.07616,
+        "meanMsPerDispatch": 0.07616,
+        "minDispatchMs": 0.0715,
+        "maxDispatchMs": 0.09125,
+        "eventKinds": {
+          "compute": 105
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              4,
+              2,
+              64
+            ],
+            "reportedIndirectSize": null,
+            "count": 105,
+            "framesPresent": 105,
+            "meanMsPerFrame": 0.07616,
+            "meanMsPerDispatch": 0.07616
+          }
+        ]
+      },
+      {
+        "hash": "0xccbdee0a8db99d2",
+        "count": 105,
+        "framesPresent": 105,
+        "meanCountPerFrame": 1,
+        "totalMs": 7.341081,
+        "meanMsPerFrame": 0.069915,
+        "meanMsPerDispatch": 0.069915,
+        "minDispatchMs": 0.065584,
+        "maxDispatchMs": 0.08575,
+        "eventKinds": {
+          "compute": 105
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              4,
+              2,
+              64
+            ],
+            "reportedIndirectSize": null,
+            "count": 105,
+            "framesPresent": 105,
+            "meanMsPerFrame": 0.069915,
+            "meanMsPerDispatch": 0.069915
+          }
+        ]
+      },
+      {
+        "hash": "0x88755165cbb69e62",
+        "count": 105,
+        "framesPresent": 105,
+        "meanCountPerFrame": 1,
+        "totalMs": 4.730837,
+        "meanMsPerFrame": 0.045056,
+        "meanMsPerDispatch": 0.045056,
+        "minDispatchMs": 0.042417,
+        "maxDispatchMs": 0.050333,
+        "eventKinds": {
+          "compute": 105
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              12,
+              12,
+              6
+            ],
+            "reportedIndirectSize": null,
+            "count": 105,
+            "framesPresent": 105,
+            "meanMsPerFrame": 0.045056,
+            "meanMsPerDispatch": 0.045056
+          }
+        ]
+      }
+    ],
+    "eventStats": [
+      {
+        "kind": "compute",
+        "count": 2568,
+        "totalMs": 2228.614748,
+        "meanMsPerFrame": 21.224902
+      },
+      {
+        "kind": "render_pass",
+        "count": 5985,
+        "totalMs": 1541.67887,
+        "meanMsPerFrame": 14.682656
+      },
+      {
+        "kind": "compute_indirect",
+        "count": 105,
+        "totalMs": 753.825498,
+        "meanMsPerFrame": 7.17929
+      },
+      {
+        "kind": "blorp",
+        "count": 15262,
+        "totalMs": 388.709451,
+        "meanMsPerFrame": 3.701995
+      }
+    ]
+  },
+  {
+    "label": "cvars-fog-off",
+    "completeFrameCount": 105,
+    "fullFrameMs": {
+      "mean": 44.684093,
+      "min": 42.92525,
+      "max": 46.861166,
+      "total": 4691.829747
+    },
+    "shaderStats": [
+      {
+        "hash": "0x79a7036abfc4b22",
+        "count": 105,
+        "framesPresent": 105,
+        "meanCountPerFrame": 1,
+        "totalMs": 829.729083,
+        "meanMsPerFrame": 7.902182,
+        "meanMsPerDispatch": 7.902182,
+        "minDispatchMs": 7.69475,
+        "maxDispatchMs": 8.296,
+        "eventKinds": {
+          "compute": 105
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              256,
+              128,
+              1
+            ],
+            "reportedIndirectSize": null,
+            "count": 105,
+            "framesPresent": 105,
+            "meanMsPerFrame": 7.902182,
+            "meanMsPerDispatch": 7.902182
+          }
+        ]
+      },
+      {
+        "hash": "0x580ca7030f598e7",
+        "count": 105,
+        "framesPresent": 105,
+        "meanCountPerFrame": 1,
+        "totalMs": 737.915674,
+        "meanMsPerFrame": 7.027768,
+        "meanMsPerDispatch": 7.027768,
+        "minDispatchMs": 4.892666,
+        "maxDispatchMs": 8.087166,
+        "eventKinds": {
+          "compute_indirect": 105
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute_indirect",
+            "known": false,
+            "groups": null,
+            "reportedIndirectSize": "0x0x0",
+            "count": 105,
+            "framesPresent": 105,
+            "meanMsPerFrame": 7.027768,
+            "meanMsPerDispatch": 7.027768
+          }
+        ]
+      },
+      {
+        "hash": "0x859e6b0efc6439f6",
+        "count": 105,
+        "framesPresent": 105,
+        "meanCountPerFrame": 1,
+        "totalMs": 508.165661,
+        "meanMsPerFrame": 4.839673,
+        "meanMsPerDispatch": 4.839673,
+        "minDispatchMs": 4.484583,
+        "maxDispatchMs": 5.242333,
+        "eventKinds": {
+          "compute": 105
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              256,
+              128,
+              1
+            ],
+            "reportedIndirectSize": null,
+            "count": 105,
+            "framesPresent": 105,
+            "meanMsPerFrame": 4.839673,
+            "meanMsPerDispatch": 4.839673
+          }
+        ]
+      },
+      {
+        "hash": "0x67fee361ac258949",
+        "count": 210,
+        "framesPresent": 105,
+        "meanCountPerFrame": 2,
+        "totalMs": 278.87408,
+        "meanMsPerFrame": 2.655944,
+        "meanMsPerDispatch": 1.327972,
+        "minDispatchMs": 1.151333,
+        "maxDispatchMs": 1.5395,
+        "eventKinds": {
+          "compute": 210
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              1,
+              256,
+              4
+            ],
+            "reportedIndirectSize": null,
+            "count": 210,
+            "framesPresent": 105,
+            "meanMsPerFrame": 2.655944,
+            "meanMsPerDispatch": 1.327972
+          }
+        ]
+      },
+      {
+        "hash": "0x7d0a8d69f0923615",
+        "count": 105,
+        "framesPresent": 105,
+        "meanCountPerFrame": 1,
+        "totalMs": 171.275077,
+        "meanMsPerFrame": 1.631191,
+        "meanMsPerDispatch": 1.631191,
+        "minDispatchMs": 1.545417,
+        "maxDispatchMs": 1.818417,
+        "eventKinds": {
+          "compute": 105
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              107,
+              60,
+              1
+            ],
+            "reportedIndirectSize": null,
+            "count": 105,
+            "framesPresent": 105,
+            "meanMsPerFrame": 1.631191,
+            "meanMsPerDispatch": 1.631191
+          }
+        ]
+      },
+      {
+        "hash": "0x21ee37b6995f4597",
+        "count": 105,
+        "framesPresent": 105,
+        "meanCountPerFrame": 1,
+        "totalMs": 121.309588,
+        "meanMsPerFrame": 1.155329,
+        "meanMsPerDispatch": 1.155329,
+        "minDispatchMs": 1.08925,
+        "maxDispatchMs": 1.242167,
+        "eventKinds": {
+          "compute": 105
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              16,
+              16,
+              32
+            ],
+            "reportedIndirectSize": null,
+            "count": 105,
+            "framesPresent": 105,
+            "meanMsPerFrame": 1.155329,
+            "meanMsPerDispatch": 1.155329
+          }
+        ]
+      },
+      {
+        "hash": "0x20c6f01908e83ed5",
+        "count": 210,
+        "framesPresent": 105,
+        "meanCountPerFrame": 2,
+        "totalMs": 56.585407,
+        "meanMsPerFrame": 0.538909,
+        "meanMsPerDispatch": 0.269454,
+        "minDispatchMs": 0.01,
+        "maxDispatchMs": 0.557417,
+        "eventKinds": {
+          "compute": 210
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              8,
+              4,
+              16
+            ],
+            "reportedIndirectSize": null,
+            "count": 210,
+            "framesPresent": 105,
+            "meanMsPerFrame": 0.538909,
+            "meanMsPerDispatch": 0.269454
+          }
+        ]
+      },
+      {
+        "hash": "0x89a9973430c58a25",
+        "count": 105,
+        "framesPresent": 105,
+        "meanCountPerFrame": 1,
+        "totalMs": 55.140672,
+        "meanMsPerFrame": 0.525149,
+        "meanMsPerDispatch": 0.525149,
+        "minDispatchMs": 0.483667,
+        "maxDispatchMs": 0.58225,
+        "eventKinds": {
+          "compute": 105
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              54,
+              30,
+              1
+            ],
+            "reportedIndirectSize": null,
+            "count": 105,
+            "framesPresent": 105,
+            "meanMsPerFrame": 0.525149,
+            "meanMsPerDispatch": 0.525149
+          }
+        ]
+      },
+      {
+        "hash": "0xe9049ae1af45c8d0",
+        "count": 105,
+        "framesPresent": 105,
+        "meanCountPerFrame": 1,
+        "totalMs": 50.822909,
+        "meanMsPerFrame": 0.484028,
+        "meanMsPerDispatch": 0.484028,
+        "minDispatchMs": 0.3825,
+        "maxDispatchMs": 0.599417,
+        "eventKinds": {
+          "compute": 105
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              32,
+              32,
+              4
+            ],
+            "reportedIndirectSize": null,
+            "count": 105,
+            "framesPresent": 105,
+            "meanMsPerFrame": 0.484028,
+            "meanMsPerDispatch": 0.484028
+          }
+        ]
+      },
+      {
+        "hash": "0xf5a7fce76a4bf918",
+        "count": 105,
+        "framesPresent": 105,
+        "meanCountPerFrame": 1,
+        "totalMs": 34.035166,
+        "meanMsPerFrame": 0.324144,
+        "meanMsPerDispatch": 0.324144,
+        "minDispatchMs": 0.27725,
+        "maxDispatchMs": 0.379667,
+        "eventKinds": {
+          "compute": 105
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              32,
+              32,
+              4
+            ],
+            "reportedIndirectSize": null,
+            "count": 105,
+            "framesPresent": 105,
+            "meanMsPerFrame": 0.324144,
+            "meanMsPerDispatch": 0.324144
+          }
+        ]
+      },
+      {
+        "hash": "0xe30091718f7e0a57",
+        "count": 61,
+        "framesPresent": 61,
+        "meanCountPerFrame": 0.580952,
+        "totalMs": 29.226834,
+        "meanMsPerFrame": 0.278351,
+        "meanMsPerDispatch": 0.479128,
+        "minDispatchMs": 0.446834,
+        "maxDispatchMs": 0.547833,
+        "eventKinds": {
+          "compute": 61
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              32,
+              32,
+              4
+            ],
+            "reportedIndirectSize": null,
+            "count": 61,
+            "framesPresent": 61,
+            "meanMsPerFrame": 0.278351,
+            "meanMsPerDispatch": 0.479128
+          }
+        ]
+      },
+      {
+        "hash": "0x3f9eb268f1cf745d",
+        "count": 210,
+        "framesPresent": 105,
+        "meanCountPerFrame": 2,
+        "totalMs": 24.223246,
+        "meanMsPerFrame": 0.230698,
+        "meanMsPerDispatch": 0.115349,
+        "minDispatchMs": 0.008667,
+        "maxDispatchMs": 0.245333,
+        "eventKinds": {
+          "compute": 210
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              16,
+              16,
+              4
+            ],
+            "reportedIndirectSize": null,
+            "count": 105,
+            "framesPresent": 105,
+            "meanMsPerFrame": 0.220948,
+            "meanMsPerDispatch": 0.220948
+          },
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              1,
+              1,
+              4
+            ],
+            "reportedIndirectSize": null,
+            "count": 105,
+            "framesPresent": 105,
+            "meanMsPerFrame": 0.00975,
+            "meanMsPerDispatch": 0.00975
+          }
+        ]
+      },
+      {
+        "hash": "0xbbea6fdb69c64db8",
+        "count": 105,
+        "framesPresent": 105,
+        "meanCountPerFrame": 1,
+        "totalMs": 11.955001,
+        "meanMsPerFrame": 0.113857,
+        "meanMsPerDispatch": 0.113857,
+        "minDispatchMs": 0.10575,
+        "maxDispatchMs": 0.14025,
+        "eventKinds": {
+          "compute": 105
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              4,
+              2,
+              1
+            ],
+            "reportedIndirectSize": null,
+            "count": 105,
+            "framesPresent": 105,
+            "meanMsPerFrame": 0.113857,
+            "meanMsPerDispatch": 0.113857
+          }
+        ]
+      },
+      {
+        "hash": "0x58e9835e31fbec6e",
+        "count": 630,
+        "framesPresent": 105,
+        "meanCountPerFrame": 6,
+        "totalMs": 11.902829,
+        "meanMsPerFrame": 0.11336,
+        "meanMsPerDispatch": 0.018893,
+        "minDispatchMs": 0.0065,
+        "maxDispatchMs": 0.071833,
+        "eventKinds": {
+          "compute": 630
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              6,
+              6,
+              6
+            ],
+            "reportedIndirectSize": null,
+            "count": 105,
+            "framesPresent": 105,
+            "meanMsPerFrame": 0.058378,
+            "meanMsPerDispatch": 0.058378
+          },
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              3,
+              3,
+              6
+            ],
+            "reportedIndirectSize": null,
+            "count": 105,
+            "framesPresent": 105,
+            "meanMsPerFrame": 0.023304,
+            "meanMsPerDispatch": 0.023304
+          },
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              2,
+              2,
+              6
+            ],
+            "reportedIndirectSize": null,
+            "count": 105,
+            "framesPresent": 105,
+            "meanMsPerFrame": 0.009127,
+            "meanMsPerDispatch": 0.009127
+          },
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              1,
+              1,
+              6
+            ],
+            "reportedIndirectSize": null,
+            "count": 315,
+            "framesPresent": 105,
+            "meanMsPerFrame": 0.022551,
+            "meanMsPerDispatch": 0.007517
+          }
+        ]
+      },
+      {
+        "hash": "0x589ee41905ff5ed2",
+        "count": 105,
+        "framesPresent": 105,
+        "meanCountPerFrame": 1,
+        "totalMs": 9.918335,
+        "meanMsPerFrame": 0.09446,
+        "meanMsPerDispatch": 0.09446,
+        "minDispatchMs": 0.087083,
+        "maxDispatchMs": 0.119,
+        "eventKinds": {
+          "compute": 105
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              2,
+              2,
+              24
+            ],
+            "reportedIndirectSize": null,
+            "count": 105,
+            "framesPresent": 105,
+            "meanMsPerFrame": 0.09446,
+            "meanMsPerDispatch": 0.09446
+          }
+        ]
+      },
+      {
+        "hash": "0x7fb288e8342a1654",
+        "count": 105,
+        "framesPresent": 105,
+        "meanCountPerFrame": 1,
+        "totalMs": 8.035333,
+        "meanMsPerFrame": 0.076527,
+        "meanMsPerDispatch": 0.076527,
+        "minDispatchMs": 0.071417,
+        "maxDispatchMs": 0.092917,
+        "eventKinds": {
+          "compute": 105
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              4,
+              2,
+              64
+            ],
+            "reportedIndirectSize": null,
+            "count": 105,
+            "framesPresent": 105,
+            "meanMsPerFrame": 0.076527,
+            "meanMsPerDispatch": 0.076527
+          }
+        ]
+      },
+      {
+        "hash": "0xccbdee0a8db99d2",
+        "count": 105,
+        "framesPresent": 105,
+        "meanCountPerFrame": 1,
+        "totalMs": 7.298499,
+        "meanMsPerFrame": 0.06951,
+        "meanMsPerDispatch": 0.06951,
+        "minDispatchMs": 0.0655,
+        "maxDispatchMs": 0.084083,
+        "eventKinds": {
+          "compute": 105
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              4,
+              2,
+              64
+            ],
+            "reportedIndirectSize": null,
+            "count": 105,
+            "framesPresent": 105,
+            "meanMsPerFrame": 0.06951,
+            "meanMsPerDispatch": 0.06951
+          }
+        ]
+      },
+      {
+        "hash": "0x88755165cbb69e62",
+        "count": 105,
+        "framesPresent": 105,
+        "meanCountPerFrame": 1,
+        "totalMs": 4.803089,
+        "meanMsPerFrame": 0.045744,
+        "meanMsPerDispatch": 0.045744,
+        "minDispatchMs": 0.041334,
+        "maxDispatchMs": 0.059834,
+        "eventKinds": {
+          "compute": 105
+        },
+        "groupDimensions": [
+          {
+            "eventKind": "compute",
+            "known": true,
+            "groups": [
+              12,
+              12,
+              6
+            ],
+            "reportedIndirectSize": null,
+            "count": 105,
+            "framesPresent": 105,
+            "meanMsPerFrame": 0.045744,
+            "meanMsPerDispatch": 0.045744
+          }
+        ]
+      }
+    ],
+    "eventStats": [
+      {
+        "kind": "compute",
+        "count": 2581,
+        "totalMs": 2213.300809,
+        "meanMsPerFrame": 21.079055
+      },
+      {
+        "kind": "render_pass",
+        "count": 5988,
+        "totalMs": 1534.578434,
+        "meanMsPerFrame": 14.615033
+      },
+      {
+        "kind": "compute_indirect",
+        "count": 105,
+        "totalMs": 737.915674,
+        "meanMsPerFrame": 7.027768
+      },
+      {
+        "kind": "blorp",
+        "count": 15130,
+        "totalMs": 369.113654,
+        "meanMsPerFrame": 3.515368
+      }
+    ]
+  }
+]

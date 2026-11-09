@@ -4,6 +4,8 @@ This is an **altered, unsupported DXVK build**, not an upstream compatibility fi
 
 **Measured result: 19.3 average FPS, not stable 40 FPS.** Preserve this baseline before making further performance changes.
 
+See [the separate follow-up profiling notes](PROFILING.md) for guarded DXVK 2.7 measurements, quality-setting tradeoffs and the untimed launcher prototype. They do not replace this frozen baseline.
+
 ## Scope and mechanism
 
 Upstream base: [`601930949d111edbbcf9dd463948426d9f8f6ddd`](https://github.com/doitsujin/dxvk/commit/601930949d111edbbcf9dd463948426d9f8f6ddd), the DXVK revision shipped in GE-Proton11-7 (v3.1-19). This branch changes eight source files: 244 insertions and six deletions before documentation and tooling.
@@ -86,7 +88,7 @@ Keep the baseline commit/artifacts unchanged. Put each experiment on a separate 
 
 1. Use the same game build, position, camera, visible scene, AC state, desktop/window mode and quality settings. Record thermal state and shader-cache/warmup conditions.
 2. Warm up each condition, then use **A/B/A** ordering with at least **three 60-second captures per condition**. Recheck A after B to detect thermal or scene drift. Do not include login/loading in a sample.
-3. Compare average FPS, 1% lows and frame-time behavior across repeats, not one favorable screenshot. A useful keep criterion is a repeatable **at least 20% average-FPS gain**, with no material low-percentile/frame-time or stability regression at the same quality. Against 19.3 FPS that means approximately 23.2 FPS, not a 0.3-FPS fluctuation.
+3. Compare average FPS, 1% lows and frame-time behavior across repeats, not one favorable screenshot. **Keep repeatable gains, including 1–2 FPS**: 2 FPS is about 10% at this baseline. There is no 20% minimum improvement threshold. Use matched return comparisons to distinguish small gains from noise, check for low-percentile/frame-time or stability regressions, and explicitly label any image-quality tradeoff. Stable 40 FPS remains the goal, not a prerequisite for retaining an improvement.
 4. Record all settings and rejected experiments. Any reduction in render scale, detail, resolution, view distance or visual features must be labeled as a quality trade-off, not a same-quality renderer optimization.
 5. Retain guard coverage and investigate any fail-closed report; never remove the guard to improve a benchmark. A driver/device error or an unexplained exit is not a successful negative test.
 

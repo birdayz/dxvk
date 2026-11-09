@@ -1,0 +1,90 @@
+[
+  {
+    "label": "720p, AA4, FSR",
+    "start": "14:15:05",
+    "end": "14:16:40",
+    "samples": 93,
+    "FPS": 20.302,
+    "Ave Frame Time (ms)": 49.249,
+    "Ave Cpu Frame Time (ms)": 14.278,
+    "Ave Gpu Render Time (ms)": 46.839,
+    "Is Gpu Bound": 1
+  },
+  {
+    "label": "720p, AA0, FSR",
+    "start": "14:17:02",
+    "end": "14:18:30",
+    "samples": 87,
+    "FPS": 21.201,
+    "Ave Frame Time (ms)": 47.169,
+    "Ave Cpu Frame Time (ms)": 13.267,
+    "Ave Gpu Render Time (ms)": 44.8,
+    "Is Gpu Bound": 1
+  },
+  {
+    "label": "720p, AA4, FSR return",
+    "start": "14:18:49",
+    "end": "14:19:22",
+    "samples": 33,
+    "FPS": 20.682,
+    "Ave Frame Time (ms)": 48.355,
+    "Ave Cpu Frame Time (ms)": 13.223,
+    "Ave Gpu Render Time (ms)": 46.005,
+    "Is Gpu Bound": 1
+  },
+  {
+    "label": "720p, AA0, FSR repeat",
+    "start": "14:19:43",
+    "end": "14:20:10",
+    "samples": 27,
+    "FPS": 21.337,
+    "Ave Frame Time (ms)": 46.871,
+    "Ave Cpu Frame Time (ms)": 13.591,
+    "Ave Gpu Render Time (ms)": 44.599,
+    "Is Gpu Bound": 1
+  },
+  {
+    "label": "720p, AA0, bilinear",
+    "start": "14:20:30",
+    "end": "14:20:58",
+    "samples": 28,
+    "FPS": 22.661,
+    "Ave Frame Time (ms)": 44.136,
+    "Ave Cpu Frame Time (ms)": 11.459,
+    "Ave Gpu Render Time (ms)": 42.218,
+    "Is Gpu Bound": 1
+  },
+  {
+    "label": "720p, AA0, FSR return",
+    "start": "14:21:18",
+    "end": "14:21:32",
+    "samples": 14,
+    "FPS": 21.25,
+    "Ave Frame Time (ms)": 47.051,
+    "Ave Cpu Frame Time (ms)": 12.121,
+    "Ave Gpu Render Time (ms)": 44.736,
+    "Is Gpu Bound": 1
+  },
+  {
+    "label": "Inside inn, AA0, FSR",
+    "start": "14:22:10",
+    "end": "14:22:59",
+    "samples": 48,
+    "FPS": 20.254,
+    "Ave Frame Time (ms)": 49.374,
+    "Ave Cpu Frame Time (ms)": 13.012,
+    "Ave Gpu Render Time (ms)": 47.465,
+    "Is Gpu Bound": 1
+  },
+  {
+    "label": "Restored camera, AA0, bilinear repeat",
+    "start": "14:23:40",
+    "end": "14:25:10",
+    "samples": 89,
+    "FPS": 22.584,
+    "Ave Frame Time (ms)": 44.274,
+    "Ave Cpu Frame Time (ms)": 13.334,
+    "Ave Gpu Render Time (ms)": 42.115,
+    "Is Gpu Bound": 1
+  }
+]
