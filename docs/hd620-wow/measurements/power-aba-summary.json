@@ -1,0 +1,446 @@
+{
+  "schema_version": 1,
+  "experiment": "CPU turbo-off A/B/A on Intel HD Graphics 620 (Kaby Lake)",
+  "date": "2026-11-09",
+  "scope": "Fresh stationary inn view after manual interaction; previous-scene comparisons excluded. Online player activity can vary.",
+  "result": {
+    "decision": "rejected_and_reverted",
+    "finding": "No demonstrated FPS gain or material release of GT clock/power headroom. B lies between the two default controls; do not claim a causal regression.",
+    "b_between_controls": true,
+    "b_vs_a1_fps_percent": -1.405,
+    "b_vs_a2_fps_percent": 0.171,
+    "return_vs_a1_fps_percent": -1.574
+  },
+  "method": {
+    "native_means": "Valid period-duration weighted; min/max are individual native aggregate observations.",
+    "rapl_means": "Accepted energy deltas divided by actual elapsed monotonic time; domains remain separate and are never summed.",
+    "sysfs_means": "Unweighted valid observations; raw scaling_cur_freq is not universally actual measured CPU frequency.",
+    "engine_samples": "Per-second engine aggregates, not per-frame samples or frame-time 1% lows; CPU/GPU timings overlap and must not be added.",
+    "alignment": "Paired engine/telemetry captures have different lengths; no exact per-sample alignment or deterministic replay is claimed.",
+    "rapl_validity": "Stable ranges, monotonic time, conservative wrap/reset checks and 250 W plausibility ceiling; no rejected intervals or wraps in these captures.",
+    "collector_sha256": "52d5cc03ae98986a109ebaba10bac20bd326754a78ba62457ac447931051daa2"
+  },
+  "package_constraints": {
+    "configured_long_term_w": 25,
+    "configured_short_term_w": 25,
+    "note": "Configured limits are not proof that power throttling occurred."
+  },
+  "restoration": {
+    "original_no_turbo": 0,
+    "after_stop_no_turbo": 0,
+    "return_readings_confirming_zero": 70,
+    "verified_restore_log": true,
+    "idempotent_stop_post": true,
+    "unit_inactive": true,
+    "unit_not_found": true,
+    "snapshot_and_ready_absent_verified_by_operator": true,
+    "lease_seconds": 180,
+    "manager_deadline_seconds": 190,
+    "deadline_expiry_tested": false,
+    "final_operator_check": {
+      "date": "2026-11-09",
+      "local_time": "21:31",
+      "timezone": "Europe/Berlin",
+      "no_turbo": 0,
+      "helpers_stopped": true
+    }
+  },
+  "runs": [
+    {
+      "id": "A1",
+      "controls": {
+        "no_turbo": 0,
+        "min_perf_pct": 11,
+        "max_perf_pct": 100,
+        "epp": "balance_performance",
+        "ac_online": 1,
+        "cpu_scaling_min_mhz": 400,
+        "cpu_scaling_max_mhz": 3500,
+        "gt_min_mhz": 300,
+        "gt_max_mhz": 1050,
+        "all_observed_controls_stable": true
+      },
+      "availability": {
+        "engine_rows": 72,
+        "engine_elapsed_s": 72.442,
+        "sysfs_samples": 70,
+        "native_samples": 68,
+        "native_valid_period_s": 69.451,
+        "rapl_valid_intervals": 69,
+        "rapl_valid_elapsed_s": 68.97,
+        "rejected_rapl_intervals": 0,
+        "skipped_deadlines": 0,
+        "filtered_eof": true,
+        "pending_filtered_bytes": 0
+      },
+      "engine": {
+        "fps": {
+          "mean": 19.769444,
+          "min": 19.3,
+          "max": 20.2
+        },
+        "frame_ms": {
+          "mean": 50.583,
+          "min": 49.48,
+          "max": 51.85
+        },
+        "cpu_frame_ms": {
+          "mean": 15.496,
+          "min": 12.18,
+          "max": 20.5
+        },
+        "gpu_render_ms": {
+          "mean": 49.506,
+          "min": 48.39,
+          "max": 50.75
+        },
+        "gpu_wait_ms": {
+          "mean": 35.018,
+          "min": 29.23,
+          "max": 38.2
+        },
+        "all_rows_gpu_bound": true
+      },
+      "native": {
+        "gt_actual_mhz": {
+          "mean": 972.735,
+          "min": 954.91,
+          "max": 989.379
+        },
+        "gt_requested_mhz": {
+          "mean": 1049.956,
+          "min": 1044.996,
+          "max": 1054.915
+        },
+        "render_3d_busy_pct": {
+          "mean": 100,
+          "min": 100,
+          "max": 100
+        },
+        "package_w": {
+          "mean": 16.838,
+          "min": 15.787,
+          "max": 18.828
+        },
+        "gpu_w": {
+          "mean": 10.416,
+          "min": 9.779,
+          "max": 10.959
+        }
+      },
+      "sysfs": {
+        "gt_actual_mhz": {
+          "mean": 960.714,
+          "min": 850,
+          "max": 1050
+        },
+        "gt_requested_mhz": {
+          "mean": 1050,
+          "min": 1050,
+          "max": 1050
+        },
+        "raw_cpu_scaling_cur_mhz": {
+          "mean": 2253.922,
+          "min": 799.98,
+          "max": 3200.169
+        },
+        "package_temperature_c": {
+          "mean": 74.986,
+          "min": 74,
+          "max": 77
+        }
+      },
+      "rapl": {
+        "package": {
+          "mean_w": 16.835,
+          "min_w": 15.684,
+          "max_w": 17.937
+        },
+        "core": {
+          "mean_w": 4.266,
+          "min_w": 3.085,
+          "max_w": 5.61
+        },
+        "gt_pp1": {
+          "mean_w": 10.416,
+          "min_w": 9.823,
+          "max_w": 10.955
+        },
+        "dram": {
+          "mean_w": 2.007,
+          "min_w": 1.925,
+          "max_w": 2.216
+        },
+        "psys": {
+          "mean_w": 28.486,
+          "min_w": 26.823,
+          "max_w": 30.407
+        }
+      }
+    },
+    {
+      "id": "B",
+      "controls": {
+        "no_turbo": 1,
+        "min_perf_pct": 11,
+        "max_perf_pct": 100,
+        "epp": "balance_performance",
+        "ac_online": 1,
+        "cpu_scaling_min_mhz": 400,
+        "cpu_scaling_max_mhz": 2700,
+        "gt_min_mhz": 300,
+        "gt_max_mhz": 1050,
+        "all_observed_controls_stable": true
+      },
+      "availability": {
+        "engine_rows": 72,
+        "engine_elapsed_s": 72.735,
+        "sysfs_samples": 70,
+        "native_samples": 68,
+        "native_valid_period_s": 69.389,
+        "rapl_valid_intervals": 69,
+        "rapl_valid_elapsed_s": 68.98,
+        "rejected_rapl_intervals": 0,
+        "skipped_deadlines": 0,
+        "filtered_eof": true,
+        "pending_filtered_bytes": 0
+      },
+      "engine": {
+        "fps": {
+          "mean": 19.491667,
+          "min": 18.4,
+          "max": 19.8
+        },
+        "frame_ms": {
+          "mean": 51.312,
+          "min": 50.56,
+          "max": 54.33
+        },
+        "cpu_frame_ms": {
+          "mean": 15.988,
+          "min": 12.26,
+          "max": 26.96
+        },
+        "gpu_render_ms": {
+          "mean": 50.18,
+          "min": 49.47,
+          "max": 51.39
+        },
+        "gpu_wait_ms": {
+          "mean": 35.257,
+          "min": 26.26,
+          "max": 38.92
+        },
+        "all_rows_gpu_bound": true
+      },
+      "native": {
+        "gt_actual_mhz": {
+          "mean": 973.105,
+          "min": 892.374,
+          "max": 985.687
+        },
+        "gt_requested_mhz": {
+          "mean": 1049.255,
+          "min": 975.386,
+          "max": 1054.737
+        },
+        "render_3d_busy_pct": {
+          "mean": 99.929,
+          "min": 95.448,
+          "max": 100
+        },
+        "package_w": {
+          "mean": 16.83,
+          "min": 15.584,
+          "max": 18.496
+        },
+        "gpu_w": {
+          "mean": 10.398,
+          "min": 9.845,
+          "max": 10.871
+        }
+      },
+      "sysfs": {
+        "gt_actual_mhz": {
+          "mean": 972.143,
+          "min": 900,
+          "max": 1050
+        },
+        "gt_requested_mhz": {
+          "mean": 1050,
+          "min": 1050,
+          "max": 1050
+        },
+        "raw_cpu_scaling_cur_mhz": {
+          "mean": 2170.875,
+          "min": 799.949,
+          "max": 2700.712
+        },
+        "package_temperature_c": {
+          "mean": 75.057,
+          "min": 74,
+          "max": 76
+        }
+      },
+      "rapl": {
+        "package": {
+          "mean_w": 16.824,
+          "min_w": 15.562,
+          "max_w": 17.963
+        },
+        "core": {
+          "mean_w": 4.284,
+          "min_w": 3.103,
+          "max_w": 5.407
+        },
+        "gt_pp1": {
+          "mean_w": 10.399,
+          "min_w": 9.862,
+          "max_w": 10.852
+        },
+        "dram": {
+          "mean_w": 2.02,
+          "min_w": 1.922,
+          "max_w": 2.155
+        },
+        "psys": {
+          "mean_w": 28.463,
+          "min_w": 26.457,
+          "max_w": 30.986
+        }
+      }
+    },
+    {
+      "id": "A2",
+      "controls": {
+        "no_turbo": 0,
+        "min_perf_pct": 11,
+        "max_perf_pct": 100,
+        "epp": "balance_performance",
+        "ac_online": 1,
+        "cpu_scaling_min_mhz": 400,
+        "cpu_scaling_max_mhz": 3500,
+        "gt_min_mhz": 300,
+        "gt_max_mhz": 1050,
+        "all_observed_controls_stable": true
+      },
+      "availability": {
+        "engine_rows": 72,
+        "engine_elapsed_s": 72.911,
+        "sysfs_samples": 70,
+        "native_samples": 68,
+        "native_valid_period_s": 69.084,
+        "rapl_valid_intervals": 69,
+        "rapl_valid_elapsed_s": 68.97,
+        "rejected_rapl_intervals": 0,
+        "skipped_deadlines": 0,
+        "filtered_eof": true,
+        "pending_filtered_bytes": 0
+      },
+      "engine": {
+        "fps": {
+          "mean": 19.458333,
+          "min": 19,
+          "max": 19.9
+        },
+        "frame_ms": {
+          "mean": 51.406,
+          "min": 50.26,
+          "max": 52.56
+        },
+        "cpu_frame_ms": {
+          "mean": 15.203,
+          "min": 10.89,
+          "max": 20.86
+        },
+        "gpu_render_ms": {
+          "mean": 50.33,
+          "min": 49.2,
+          "max": 51.46
+        },
+        "gpu_wait_ms": {
+          "mean": 36.134,
+          "min": 30.29,
+          "max": 40.34
+        },
+        "all_rows_gpu_bound": true
+      },
+      "native": {
+        "gt_actual_mhz": {
+          "mean": 971.769,
+          "min": 888.666,
+          "max": 988.713
+        },
+        "gt_requested_mhz": {
+          "mean": 1049.906,
+          "min": 982.21,
+          "max": 1054.957
+        },
+        "render_3d_busy_pct": {
+          "mean": 100,
+          "min": 100,
+          "max": 100
+        },
+        "package_w": {
+          "mean": 16.721,
+          "min": 15.622,
+          "max": 18.066
+        },
+        "gpu_w": {
+          "mean": 10.313,
+          "min": 9.366,
+          "max": 10.85
+        }
+      },
+      "sysfs": {
+        "gt_actual_mhz": {
+          "mean": 980,
+          "min": 900,
+          "max": 1050
+        },
+        "gt_requested_mhz": {
+          "mean": 1050,
+          "min": 1050,
+          "max": 1050
+        },
+        "raw_cpu_scaling_cur_mhz": {
+          "mean": 2236.798,
+          "min": 799.978,
+          "max": 3299.923
+        },
+        "package_temperature_c": {
+          "mean": 75.214,
+          "min": 74,
+          "max": 78
+        }
+      },
+      "rapl": {
+        "package": {
+          "mean_w": 16.72,
+          "min_w": 15.579,
+          "max_w": 18.019
+        },
+        "core": {
+          "mean_w": 4.279,
+          "min_w": 3.074,
+          "max_w": 5.73
+        },
+        "gt_pp1": {
+          "mean_w": 10.31,
+          "min_w": 9.755,
+          "max_w": 10.997
+        },
+        "dram": {
+          "mean_w": 2.002,
+          "min_w": 1.919,
+          "max_w": 2.182
+        },
+        "psys": {
+          "mean_w": 28.35,
+          "min_w": 26.709,
+          "max_w": 29.994
+        }
+      }
+    }
+  ]
+}
