@@ -2004,6 +2004,10 @@ namespace dxvk {
       return makeBindingRange(m_readWriteResources);
     }
 
+    DxvkPipelineBindingRange getKblTypedReadResources() const {
+      return { m_kblTypedReadResources.size(), m_kblTypedReadResources.data() };
+    }
+
     /**
      * \brief Queries shader stages with hazardous descriptors
      *
@@ -2071,6 +2075,7 @@ namespace dxvk {
 
     std::array<BindingList, MaxStages>  m_readOnlyResources = { };
     BindingList                         m_readWriteResources = { };
+    std::vector<DxvkShaderDescriptor>    m_kblTypedReadResources;
 
     void buildPipelineLayout(
             DxvkPipelineLayoutType      type,
@@ -2095,7 +2100,8 @@ namespace dxvk {
             DxvkPipelineManager*        manager);
 
     void buildMetadata(
-      const DxvkPipelineLayoutBuilder&  builder);
+      const DxvkPipelineLayoutBuilder&  builder,
+            bool                        kblGuard);
 
     DxvkPipelineLayoutFlags getPipelineLayoutFlags(
             DxvkPipelineLayoutType      type,

@@ -63,6 +63,8 @@ namespace dxvk {
     SemanticIo                  = 12u,
     /// Whether to explicitly use BDA for fully-bound constant buffers.
     LowerInBoundsCbvToBda       = 13u,
+    /// Guard-only binding metadata; no shader instruction changes.
+    KblUavGuardMetadata         = 14u,
   };
 
   using DxvkShaderCompileFlags = Flags<DxvkShaderCompileFlag>;

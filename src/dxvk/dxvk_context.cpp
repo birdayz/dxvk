@@ -1,4 +1,6 @@
 #include <algorithm>
+#include <atomic>
+#include <cstdlib>
 #include <cmath>
 #include <cstring>
 #include <map>
@@ -7,6 +9,8 @@
 
 #include "dxvk_device.h"
 #include "dxvk_context.h"
+#include "dxvk_kbl_guard.h"
+#include "../util/util_env.h"
 
 namespace dxvk {
   
@@ -21,6 +25,16 @@ namespace dxvk {
     m_queryManager(m_common->queryPool()),
     m_descriptorWorker(device),
     m_implicitResolves(device) {
+    auto adapter = device->adapter()->info();
+    m_kblUavGuard = kbl::isWowHd620(env::getExeName(), adapter.vendorId, adapter.deviceId)
+      && (env::getEnvVar("DXVK_KBL_WOW_UAV_GUARD") == "1"
+       || env::getEnvVar("DXVK_KBL_WOW_COMPAT") == "1");
+    if (m_kblUavGuard) {
+      static std::atomic<bool> announced = { false };
+      if (!announced.exchange(true))
+        Logger::info("KBLGUARD enabled: checks bound shader-read storage images and typed texel buffers before each user draw/dispatch; unsupported potential reads abort before recording the command; no emulation.");
+    }
+
     // Create descriptor heap or legacy pool object,
     // depending on feature support.
     if (device->canUseDescriptorHeap()) {
@@ -85,7 +99,12 @@ namespace dxvk {
   
   
   DxvkContext::~DxvkContext() {
-    
+    if (m_kblUavGuard && (m_kblGraphicsChecks || m_kblComputeChecks))
+      Logger::info(str::format("KBLGUARD summary graphics_checks=", m_kblGraphicsChecks,
+        " compute_checks=", m_kblComputeChecks, " bound_read_images=", m_kblImageReadBindings,
+        " bound_read_texel_buffers=", m_kblTexelReadBindings,
+        " distinct_image_formats=", m_kblReadFormats.size(), " distinct_texel_formats=", m_kblTexelReadFormats.size(),
+        " format_property_queries=", m_kblFormatProperties.size()));
   }
   
   
@@ -8239,6 +8258,87 @@ namespace dxvk {
   }
 
 
+  const DxvkContext::KblFormatProperties& DxvkContext::getKblFormatProperties(VkFormat format) {
+    auto entry = std::find_if(m_kblFormatProperties.begin(), m_kblFormatProperties.end(),
+      [format] (const KblFormatProperties& properties) { return properties.format == format; });
+    if (entry != m_kblFormatProperties.end())
+      return *entry;
+
+    auto features = m_device->getFormatFeatures(format);
+    m_kblFormatProperties.push_back({ format, features.optimal, features.linear, features.buffer });
+    return m_kblFormatProperties.back();
+  }
+
+
+  void DxvkContext::checkKblUavReads(const DxvkPipelineBindings* layout, bool compute) {
+    uint64_t& checks = compute ? m_kblComputeChecks : m_kblGraphicsChecks;
+    checks++;
+
+    auto checkRange = [&] (DxvkPipelineBindingRange range) {
+      for (uint32_t i = 0; i < range.bindingCount; i++) {
+        const auto& binding = range.bindings[i];
+        if (!kbl::isTypedStorageRead(binding.getDescriptorType(), binding.getAccess()))
+          continue;
+
+        const auto& resource = m_resources[binding.getResourceIndex()];
+        bool texelBuffer = binding.getDescriptorType() == VK_DESCRIPTOR_TYPE_STORAGE_TEXEL_BUFFER;
+        VkFormat format;
+        VkImageTiling tiling = VK_IMAGE_TILING_MAX_ENUM;
+        VkFormatFeatureFlags2 realFeatures;
+        if (texelBuffer) {
+          if (!resource.bufferView || !resource.bufferView->getDescriptor(false))
+            continue;
+          format = resource.bufferView->info().format;
+          realFeatures = getKblFormatProperties(format).buffer;
+          m_kblTexelReadBindings++;
+        } else {
+          if (!resource.imageView || !resource.imageView->getDescriptor(binding.getViewType()))
+            continue;
+          format = resource.imageView->info().format;
+          tiling = resource.imageView->image()->info().tiling;
+          const auto& features = getKblFormatProperties(format);
+          realFeatures = tiling == VK_IMAGE_TILING_OPTIMAL ? features.optimal
+            : tiling == VK_IMAGE_TILING_LINEAR ? features.linear : 0u;
+          m_kblImageReadBindings++;
+        }
+        bool supported = kbl::supportsTypedStorageRead(binding.getDescriptorType(), format, realFeatures);
+        auto& formats = texelBuffer ? m_kblTexelReadFormats : m_kblReadFormats;
+
+        if (std::find(formats.begin(), formats.end(), format) == formats.end()) {
+          formats.push_back(format);
+          Logger::info(str::format("KBLGUARD first shader-read kind=", texelBuffer ? "texel_buffer" : "image",
+            " format=", uint32_t(format),
+            " tiling=", uint32_t(tiling), " stage_mask=0x", std::hex, binding.getStageMask(),
+            " read_flags=0x", binding.getAccess(), " real_format_features=0x", realFeatures,
+            " set=", std::dec, binding.getSet(), " binding=", binding.getBinding(),
+            " array_index=", binding.getArrayIndex(), " resource_index=", binding.getResourceIndex(),
+            " real_read_supported=", supported, " basic_r32=", kbl::isBasicR32(format)));
+        }
+
+        if (!supported) {
+          Logger::err(str::format("KBLGUARD FAIL-CLOSED: potential unsupported typed UAV read; abort BEFORE draw/dispatch recording. kind=",
+            texelBuffer ? "texel_buffer" : "image", " format=", uint32_t(format), " tiling=", uint32_t(tiling), " stage_mask=0x", std::hex, binding.getStageMask(),
+            " read_flags=0x", binding.getAccess(), " real_format_features=0x", realFeatures,
+            " set=", std::dec, binding.getSet(), " binding=", binding.getBinding(),
+            " array_index=", binding.getArrayIndex(), " resource_index=", binding.getResourceIndex(),
+            " graphics_checks=", m_kblGraphicsChecks, " compute_checks=", m_kblComputeChecks,
+            " bound_read_images=", m_kblImageReadBindings, " bound_read_texel_buffers=", m_kblTexelReadBindings));
+          std::abort();
+        }
+      }
+    };
+
+    checkRange(layout->getKblTypedReadResources());
+
+    if (checks == 1u)
+      Logger::info(str::format("KBLGUARD live checkpoint=", compute ? "compute" : "graphics",
+        " checked_commands=", checks, " bound_read_images=", m_kblImageReadBindings,
+        " bound_read_texel_buffers=", m_kblTexelReadBindings,
+        " distinct_image_formats=", m_kblReadFormats.size(), " distinct_texel_formats=", m_kblTexelReadFormats.size(),
+        " format_property_queries=", m_kblFormatProperties.size()));
+  }
+
+
   template<bool Indirect, bool Resolve>
   bool DxvkContext::commitComputeState() {
     this->endRenderPass(false);
@@ -8275,6 +8375,9 @@ namespace dxvk {
     if (m_flags.all(DxvkContextFlag::CpHasPushData,
                     DxvkContextFlag::DirtyPushData))
       this->updatePushData<VK_PIPELINE_BIND_POINT_COMPUTE>();
+
+    if (unlikely(m_kblUavGuard))
+      this->checkKblUavReads(m_state.cp.pipeline->getLayout(), true);
 
     return true;
   }
@@ -8445,6 +8548,9 @@ namespace dxvk {
 
     if (m_flags.test(DxvkContextFlag::DirtyDrawBuffer) && Indirect)
       this->trackDrawBuffer();
+
+    if (unlikely(m_kblUavGuard))
+      this->checkKblUavReads(m_state.gp.pipeline->getLayout(), false);
 
     return true;
   }

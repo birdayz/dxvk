@@ -5,6 +5,7 @@
 #include <util/util_log.h>
 
 #include "dxvk_shader_ir.h"
+#include "dxvk_kbl_guard.h"
 
 namespace dxvk {
 
@@ -359,6 +360,7 @@ namespace dxvk {
     struct ResourceAlias {
       bool hasAlias = false;
       bool hasBinding = false;
+      kbl::UavAliasAccess kblAccess;
     };
 
     struct PushDataDwordEntry {
@@ -471,6 +473,18 @@ namespace dxvk {
 
             if (!e.second)
               e.first->second.hasAlias = true;
+
+            if (m_info.options.flags.test(DxvkShaderCompileFlag::KblUavGuardMetadata) && k.opCode == dxbc_spv::ir::OpCode::eDclUav
+             && (k.descriptorType == VK_DESCRIPTOR_TYPE_STORAGE_IMAGE
+              || k.descriptorType == VK_DESCRIPTOR_TYPE_STORAGE_TEXEL_BUFFER)) {
+              auto flags = dxbc_spv::ir::UavFlags(iter->getOperand(5u));
+              VkAccessFlags access = 0u;
+              if (!(flags & dxbc_spv::ir::UavFlag::eWriteOnly))
+                access |= VK_ACCESS_SHADER_READ_BIT;
+              if (!(flags & dxbc_spv::ir::UavFlag::eReadOnly))
+                access |= VK_ACCESS_SHADER_WRITE_BIT;
+              e.first->second.kblAccess.merge(access, uint32_t(iter->getOperand(3u)));
+            }
           } break;
 
           default:
@@ -567,6 +581,13 @@ namespace dxvk {
       }
 
       auto& resourceAlias = getResourceAlias(op->getOpCode(), regSpace, regIndex, binding.descriptorType);
+
+      if (m_info.options.flags.test(DxvkShaderCompileFlag::KblUavGuardMetadata) && resourceAlias.kblAccess.descriptorCount) {
+        binding.access |= resourceAlias.kblAccess.access;
+        binding.descriptorCount = resourceAlias.kblAccess.descriptorCount;
+        if (resourceAlias.hasAlias)
+          binding.accessOp = DxvkAccessOp::None;
+      }
 
       if (!resourceAlias.hasAlias)
         binding.viewType = determineViewType(resourceKind);
