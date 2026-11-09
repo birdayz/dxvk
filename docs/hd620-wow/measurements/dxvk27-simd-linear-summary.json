@@ -1,0 +1,440 @@
+{
+  "schemaVersion": 1,
+  "timingUnit": "milliseconds",
+  "method": "Mesa u_trace matching begin/end absolute GPU timestamps; complete frames only",
+  "normalization": "Per complete frame unless an explicit per-dispatch field is named",
+  "simdOrder": [
+    "simd-default-a",
+    "simd8-a",
+    "simd16-a",
+    "simd-default-b"
+  ],
+  "defaultReturnDeltaMs": -0.155548,
+  "limitations": [
+    "Instrumented GPU intervals are not ordinary gameplay FPS benchmarks.",
+    "Nested BLORP intervals are not independent additive frame work.",
+    "Online player and scene activity varied.",
+    "Firefox was opened idle behind the game for cs16 and the default return, but not for initial default or cs8.",
+    "The SIMD return comparison supports rejecting forced widths, not a precisely isolated causal effect size.",
+    "Saved linear=0 still reported startup linear enabled and did not remove the three hot jobs."
+  ],
+  "captures": [
+    {
+      "label": "simd-default-a",
+      "comparison": "simd-return",
+      "compilerSelection": "default",
+      "firefoxIdleBehindGame": false,
+      "completeFrameCount": 421,
+      "fullFrameMs": {
+        "mean": 45.314802,
+        "min": 42.180917,
+        "max": 47.470333,
+        "total": 19077.531662
+      },
+      "hotShaders": [
+        {
+          "hash": "0x79a7036abfc4b22",
+          "count": 421,
+          "framesPresent": 421,
+          "meanCountPerFrame": 1,
+          "totalMs": 3312.567413,
+          "meanMsPerFrame": 7.868331,
+          "meanMsPerDispatch": 7.868331,
+          "minDispatchMs": 7.559667,
+          "maxDispatchMs": 8.326083,
+          "eventKinds": {
+            "compute": 421
+          }
+        },
+        {
+          "hash": "0x580ca7030f598e7",
+          "count": 421,
+          "framesPresent": 421,
+          "meanCountPerFrame": 1,
+          "totalMs": 2997.173075,
+          "meanMsPerFrame": 7.119176,
+          "meanMsPerDispatch": 7.119176,
+          "minDispatchMs": 4.7615,
+          "maxDispatchMs": 8.743417,
+          "eventKinds": {
+            "compute_indirect": 421
+          }
+        },
+        {
+          "hash": "0x859e6b0efc6439f6",
+          "count": 421,
+          "framesPresent": 421,
+          "meanCountPerFrame": 1,
+          "totalMs": 2075.219752,
+          "meanMsPerFrame": 4.929263,
+          "meanMsPerDispatch": 4.929263,
+          "minDispatchMs": 4.477083,
+          "maxDispatchMs": 5.479333,
+          "eventKinds": {
+            "compute": 421
+          }
+        }
+      ],
+      "eventStats": [
+        {
+          "kind": "compute",
+          "count": 10345,
+          "totalMs": 8898.523727,
+          "meanMsPerFrame": 21.136636
+        },
+        {
+          "kind": "render_pass",
+          "count": 24256,
+          "totalMs": 6254.120648,
+          "meanMsPerFrame": 14.855393
+        },
+        {
+          "kind": "compute_indirect",
+          "count": 421,
+          "totalMs": 2997.173075,
+          "meanMsPerFrame": 7.119176
+        },
+        {
+          "kind": "blorp",
+          "count": 61408,
+          "totalMs": 1583.295288,
+          "meanMsPerFrame": 3.760796
+        }
+      ]
+    },
+    {
+      "label": "simd8-a",
+      "comparison": "simd-return",
+      "compilerSelection": "cs8",
+      "firefoxIdleBehindGame": false,
+      "completeFrameCount": 424,
+      "fullFrameMs": {
+        "mean": 48.255384,
+        "min": 44.877084,
+        "max": 51.394583,
+        "total": 20460.282912
+      },
+      "hotShaders": [
+        {
+          "hash": "0x79a7036abfc4b22",
+          "count": 424,
+          "framesPresent": 424,
+          "meanCountPerFrame": 1,
+          "totalMs": 3599.392336,
+          "meanMsPerFrame": 8.489133,
+          "meanMsPerDispatch": 8.489133,
+          "minDispatchMs": 8.138917,
+          "maxDispatchMs": 8.99825,
+          "eventKinds": {
+            "compute": 424
+          }
+        },
+        {
+          "hash": "0x580ca7030f598e7",
+          "count": 424,
+          "framesPresent": 424,
+          "meanCountPerFrame": 1,
+          "totalMs": 2940.036075,
+          "meanMsPerFrame": 6.934047,
+          "meanMsPerDispatch": 6.934047,
+          "minDispatchMs": 4.64975,
+          "maxDispatchMs": 8.522333,
+          "eventKinds": {
+            "compute_indirect": 424
+          }
+        },
+        {
+          "hash": "0x859e6b0efc6439f6",
+          "count": 424,
+          "framesPresent": 424,
+          "meanCountPerFrame": 1,
+          "totalMs": 2748.558,
+          "meanMsPerFrame": 6.482448,
+          "meanMsPerDispatch": 6.482448,
+          "minDispatchMs": 5.845167,
+          "maxDispatchMs": 6.93575,
+          "eventKinds": {
+            "compute": 424
+          }
+        }
+      ],
+      "eventStats": [
+        {
+          "kind": "compute",
+          "count": 10425,
+          "totalMs": 10535.141197,
+          "meanMsPerFrame": 24.847031
+        },
+        {
+          "kind": "render_pass",
+          "count": 24169,
+          "totalMs": 6147.3995,
+          "meanMsPerFrame": 14.498584
+        },
+        {
+          "kind": "compute_indirect",
+          "count": 424,
+          "totalMs": 2940.036075,
+          "meanMsPerFrame": 6.934047
+        },
+        {
+          "kind": "blorp",
+          "count": 61193,
+          "totalMs": 1575.96664,
+          "meanMsPerFrame": 3.716902
+        }
+      ]
+    },
+    {
+      "label": "simd16-a",
+      "comparison": "simd-return",
+      "compilerSelection": "cs16",
+      "firefoxIdleBehindGame": true,
+      "completeFrameCount": 420,
+      "fullFrameMs": {
+        "mean": 56.67482,
+        "min": 50.604417,
+        "max": 61.05875,
+        "total": 23803.424598
+      },
+      "hotShaders": [
+        {
+          "hash": "0x79a7036abfc4b22",
+          "count": 420,
+          "framesPresent": 420,
+          "meanCountPerFrame": 1,
+          "totalMs": 3307.538417,
+          "meanMsPerFrame": 7.875091,
+          "meanMsPerDispatch": 7.875091,
+          "minDispatchMs": 7.558417,
+          "maxDispatchMs": 8.302834,
+          "eventKinds": {
+            "compute": 420
+          }
+        },
+        {
+          "hash": "0x580ca7030f598e7",
+          "count": 420,
+          "framesPresent": 420,
+          "meanCountPerFrame": 1,
+          "totalMs": 7949.551836,
+          "meanMsPerFrame": 18.927504,
+          "meanMsPerDispatch": 18.927504,
+          "minDispatchMs": 12.998584,
+          "maxDispatchMs": 23.208084,
+          "eventKinds": {
+            "compute_indirect": 420
+          }
+        },
+        {
+          "hash": "0x859e6b0efc6439f6",
+          "count": 420,
+          "framesPresent": 420,
+          "meanCountPerFrame": 1,
+          "totalMs": 1962.739181,
+          "meanMsPerFrame": 4.673189,
+          "meanMsPerDispatch": 4.673189,
+          "minDispatchMs": 4.241417,
+          "maxDispatchMs": 5.097,
+          "eventKinds": {
+            "compute": 420
+          }
+        }
+      ],
+      "eventStats": [
+        {
+          "kind": "compute",
+          "count": 10371,
+          "totalMs": 8665.874944,
+          "meanMsPerFrame": 20.633036
+        },
+        {
+          "kind": "compute_indirect",
+          "count": 420,
+          "totalMs": 7949.551836,
+          "meanMsPerFrame": 18.927504
+        },
+        {
+          "kind": "render_pass",
+          "count": 24315,
+          "totalMs": 6194.086512,
+          "meanMsPerFrame": 14.747825
+        },
+        {
+          "kind": "blorp",
+          "count": 61245,
+          "totalMs": 1636.988575,
+          "meanMsPerFrame": 3.897592
+        }
+      ]
+    },
+    {
+      "label": "simd-default-b",
+      "comparison": "simd-return",
+      "compilerSelection": "default",
+      "firefoxIdleBehindGame": true,
+      "completeFrameCount": 423,
+      "fullFrameMs": {
+        "mean": 45.159254,
+        "min": 42.29775,
+        "max": 47.28075,
+        "total": 19102.364419
+      },
+      "hotShaders": [
+        {
+          "hash": "0x79a7036abfc4b22",
+          "count": 423,
+          "framesPresent": 423,
+          "meanCountPerFrame": 1,
+          "totalMs": 3346.409753,
+          "meanMsPerFrame": 7.911134,
+          "meanMsPerDispatch": 7.911134,
+          "minDispatchMs": 7.7035,
+          "maxDispatchMs": 8.395333,
+          "eventKinds": {
+            "compute": 423
+          }
+        },
+        {
+          "hash": "0x580ca7030f598e7",
+          "count": 423,
+          "framesPresent": 423,
+          "meanCountPerFrame": 1,
+          "totalMs": 3046.590924,
+          "meanMsPerFrame": 7.202343,
+          "meanMsPerDispatch": 7.202343,
+          "minDispatchMs": 4.73975,
+          "maxDispatchMs": 8.54675,
+          "eventKinds": {
+            "compute_indirect": 423
+          }
+        },
+        {
+          "hash": "0x859e6b0efc6439f6",
+          "count": 423,
+          "framesPresent": 423,
+          "meanCountPerFrame": 1,
+          "totalMs": 2093.193832,
+          "meanMsPerFrame": 4.948449,
+          "meanMsPerDispatch": 4.948449,
+          "minDispatchMs": 4.351417,
+          "maxDispatchMs": 5.735,
+          "eventKinds": {
+            "compute": 423
+          }
+        }
+      ],
+      "eventStats": [
+        {
+          "kind": "compute",
+          "count": 10431,
+          "totalMs": 8997.031738,
+          "meanMsPerFrame": 21.269579
+        },
+        {
+          "kind": "render_pass",
+          "count": 24137,
+          "totalMs": 6193.367851,
+          "meanMsPerFrame": 14.641532
+        },
+        {
+          "kind": "compute_indirect",
+          "count": 423,
+          "totalMs": 3046.590924,
+          "meanMsPerFrame": 7.202343
+        },
+        {
+          "kind": "blorp",
+          "count": 61308,
+          "totalMs": 1560.945822,
+          "meanMsPerFrame": 3.690179
+        }
+      ]
+    },
+    {
+      "label": "linear-start",
+      "comparison": "linear-startup",
+      "compilerSelection": "default",
+      "firefoxIdleBehindGame": null,
+      "savedLinearCvar": 0,
+      "reportedLinearEnabledOnStart": true,
+      "completeFrameCount": 486,
+      "fullFrameMs": {
+        "mean": 43.56694,
+        "min": 40.573583,
+        "max": 47.02325,
+        "total": 21173.532775
+      },
+      "hotShaders": [
+        {
+          "hash": "0x79a7036abfc4b22",
+          "count": 486,
+          "framesPresent": 486,
+          "meanCountPerFrame": 1,
+          "totalMs": 3840.846997,
+          "meanMsPerFrame": 7.902977,
+          "meanMsPerDispatch": 7.902977,
+          "minDispatchMs": 7.68975,
+          "maxDispatchMs": 8.48625,
+          "eventKinds": {
+            "compute": 486
+          }
+        },
+        {
+          "hash": "0x580ca7030f598e7",
+          "count": 486,
+          "framesPresent": 486,
+          "meanCountPerFrame": 1,
+          "totalMs": 3398.235843,
+          "meanMsPerFrame": 6.992255,
+          "meanMsPerDispatch": 6.992255,
+          "minDispatchMs": 4.765083,
+          "maxDispatchMs": 9.414417,
+          "eventKinds": {
+            "compute_indirect": 486
+          }
+        },
+        {
+          "hash": "0x859e6b0efc6439f6",
+          "count": 486,
+          "framesPresent": 486,
+          "meanCountPerFrame": 1,
+          "totalMs": 2352.656081,
+          "meanMsPerFrame": 4.840856,
+          "meanMsPerDispatch": 4.840856,
+          "minDispatchMs": 4.446083,
+          "maxDispatchMs": 5.601,
+          "eventKinds": {
+            "compute": 486
+          }
+        }
+      ],
+      "eventStats": [
+        {
+          "kind": "compute",
+          "count": 12176,
+          "totalMs": 10278.781391,
+          "meanMsPerFrame": 21.149756
+        },
+        {
+          "kind": "render_pass",
+          "count": 22883,
+          "totalMs": 6500.96678,
+          "meanMsPerFrame": 13.376475
+        },
+        {
+          "kind": "compute_indirect",
+          "count": 486,
+          "totalMs": 3398.235843,
+          "meanMsPerFrame": 6.992255
+        },
+        {
+          "kind": "blorp",
+          "count": 60485,
+          "totalMs": 1771.082992,
+          "meanMsPerFrame": 3.644204
+        }
+      ]
+    }
+  ]
+}

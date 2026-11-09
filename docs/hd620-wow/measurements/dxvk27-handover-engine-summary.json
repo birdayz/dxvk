@@ -1,0 +1,39 @@
+{
+  "rows": 67,
+  "first": "2026-11-09 17:42:43.863",
+  "last": "2026-11-09 17:43:51.338",
+  "elapsedSeconds": 67.475,
+  "metrics": {
+    "FPS": {
+      "mean": 22.028358208955222,
+      "min": 21.7,
+      "max": 22.4
+    },
+    "Ave Frame Time (ms)": {
+      "mean": 45.38985074626866,
+      "min": 44.58,
+      "max": 45.99
+    },
+    "Ave Cpu Frame Time (ms)": {
+      "mean": 15.696417910447758,
+      "min": 12,
+      "max": 20.44
+    },
+    "Ave Gpu Render Time (ms)": {
+      "mean": 43.00417910447759,
+      "min": 42.24,
+      "max": 43.53
+    },
+    "Ave Gpu Wait Time (ms)": {
+      "mean": 29.57343283582088,
+      "min": 24.53,
+      "max": 33.49
+    },
+    "Is Gpu Bound": {
+      "mean": 1,
+      "min": 1,
+      "max": 1
+    }
+  },
+  "note": "Engine LogFps approximately one-second aggregates, not per-frame percentiles. Ordinary installed Battle.net launcher; no Mesa GPU trace/SIMD override. Same stationary scene; Battle.net minimized, Firefox idle behind game."
+}
